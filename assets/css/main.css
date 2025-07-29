@@ -51,6 +51,18 @@
 @import url('../../pages/css/privacy.css');
 @import url('../../pages/css/terms-of-service.css');
 
+/* Tópicos da aplicação IA Do Zero */
+@import url('../../assets/css/topics/fundamentos.css');
+@import url('../../assets/css/topics/matematica.css');
+@import url('../../assets/css/topics/ml.css');
+@import url('../../assets/css/topics/deep-learning.css');
+@import url('../../assets/css/topics/programacao.css');
+@import url('../../assets/css/topics/engenharia-dados.css');
+@import url('../../assets/css/topics/avaliacao.css');
+@import url('../../assets/css/topics/aplicacoes.css');
+@import url('../../assets/css/topics/etica.css');
+@import url('../../assets/css/topics/projetos.css');
+
 /* ===================================================================
    ESTILOS GLOBAIS ADICIONAIS
    =================================================================== */
