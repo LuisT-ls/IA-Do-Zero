@@ -19,13 +19,15 @@
   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  user-select: none;
 }
 
 .theme-toggle-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .theme-toggle-btn:active {
@@ -38,39 +40,55 @@
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
+/* Container para os ícones */
+.theme-icon-container {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Ícones do tema */
 .theme-icon-light,
 .theme-icon-dark {
   transition: all 0.3s ease;
   font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .theme-icon-light {
   opacity: 1;
-  transform: rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg);
+  color: #ffd700;
 }
 
 .theme-icon-dark {
   opacity: 0;
-  transform: rotate(-90deg);
-  position: absolute;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  color: #ffffff;
 }
 
 /* Estados para modo escuro ativo */
 [data-theme='dark'] .theme-icon-light {
   opacity: 0;
-  transform: rotate(90deg);
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 [data-theme='dark'] .theme-icon-dark {
   opacity: 1;
-  transform: rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg);
 }
 
 /* Texto do botão */
 .theme-text {
   transition: all 0.3s ease;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 /* Animação de loading */
@@ -86,10 +104,10 @@
 
 @keyframes spin {
   from {
-    transform: rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
@@ -119,21 +137,64 @@
   border-color: rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 [data-theme='dark'] .theme-toggle-btn:hover {
   border-color: rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme='dark'] .theme-icon-light {
+  color: #ffd700;
+}
+
+[data-theme='dark'] .theme-icon-dark {
+  color: #ffffff;
 }
 
 /* Modo claro - ajustes específicos */
 [data-theme='light'] .theme-toggle-btn {
-  border-color: rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 [data-theme='light'] .theme-toggle-btn:hover {
-  border-color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='light'] .theme-icon-light {
+  color: #ffd700;
+}
+
+[data-theme='light'] .theme-icon-dark {
+  color: #ffffff;
+}
+
+/* Estados de foco melhorados */
+.theme-toggle-btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+/* Animação de entrada */
+.theme-toggle-btn {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

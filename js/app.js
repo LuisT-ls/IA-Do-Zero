@@ -7,20 +7,41 @@
   'use strict'
 
   // ===================================================================
-  // GESTÃO DE TEMA (DARKMODE)
+  // GESTÃO DE TEMA (DARKMODE/LIGHTMODE)
   // ===================================================================
 
   class ThemeManager {
     constructor() {
       this.themeToggle = document.getElementById('theme-toggle')
-      this.currentTheme = this.getStoredTheme() || this.getSystemTheme()
+      this.currentTheme = this.getInitialTheme()
       this.init()
     }
 
     init() {
-      this.applyTheme(this.currentTheme)
+      // Aplica o tema inicial sem animação
+      this.applyTheme(this.currentTheme, false)
       this.setupEventListeners()
       this.updateButtonState()
+
+      // Adiciona classe para transições após inicialização
+      setTimeout(() => {
+        document.documentElement.classList.add('theme-transitions')
+        document.body.classList.add('theme-transitions')
+      }, 100)
+    }
+
+    getInitialTheme() {
+      // 1. Verifica se há tema salvo no localStorage
+      const storedTheme = this.getStoredTheme()
+      if (storedTheme) {
+        return storedTheme
+      }
+
+      // 2. Verifica preferência do sistema
+      const systemTheme = this.getSystemTheme()
+
+      // 3. Se não há preferência salva, usa o tema do sistema
+      return systemTheme
     }
 
     getStoredTheme() {
@@ -37,16 +58,46 @@
       localStorage.setItem('theme', theme)
     }
 
-    applyTheme(theme) {
+    applyTheme(theme, withAnimation = true) {
+      // Remove classes de transição temporariamente para evitar flicker
+      if (!withAnimation) {
+        document.documentElement.classList.remove('theme-transitions')
+        document.body.classList.remove('theme-transitions')
+      }
+
+      // Aplica o tema
       document.documentElement.setAttribute('data-theme', theme)
       document.body.setAttribute('data-theme', theme)
       this.currentTheme = theme
       this.setStoredTheme(theme)
+
+      // Re-adiciona classes de transição após um pequeno delay
+      if (!withAnimation) {
+        setTimeout(() => {
+          document.documentElement.classList.add('theme-transitions')
+          document.body.classList.add('theme-transitions')
+        }, 50)
+      }
+
+      // Atualiza meta theme-color para mobile
+      this.updateMetaThemeColor(theme)
+    }
+
+    updateMetaThemeColor(theme) {
+      let metaThemeColor = document.querySelector('meta[name="theme-color"]')
+
+      if (!metaThemeColor) {
+        metaThemeColor = document.createElement('meta')
+        metaThemeColor.name = 'theme-color'
+        document.head.appendChild(metaThemeColor)
+      }
+
+      metaThemeColor.content = theme === 'dark' ? '#1a1a1a' : '#ffffff'
     }
 
     toggleTheme() {
       const newTheme = this.currentTheme === 'light' ? 'dark' : 'light'
-      this.applyTheme(newTheme)
+      this.applyTheme(newTheme, true)
       this.updateButtonState()
       this.showThemeNotification(newTheme)
     }
@@ -66,6 +117,12 @@
       setTimeout(() => {
         this.themeToggle.classList.remove('loading')
       }, 300)
+
+      // Atualiza aria-label para acessibilidade
+      this.themeToggle.setAttribute(
+        'aria-label',
+        isDark ? 'Alternar para modo claro' : 'Alternar para modo escuro'
+      )
     }
 
     showThemeNotification(theme) {
@@ -91,7 +148,10 @@
         color: this.currentTheme === 'dark' ? '#ffffff' : '#000000',
         padding: '12px 20px',
         borderRadius: '8px',
-        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+        boxShadow:
+          this.currentTheme === 'dark'
+            ? '0 4px 12px rgba(0, 0, 0, 0.5)'
+            : '0 4px 12px rgba(0, 0, 0, 0.2)',
         zIndex: '9999',
         fontSize: '14px',
         fontWeight: '500',
@@ -99,7 +159,8 @@
           this.currentTheme === 'dark' ? '#404040' : '#dee2e6'
         }`,
         transform: 'translateX(100%)',
-        transition: 'transform 0.3s ease'
+        transition: 'transform 0.3s ease',
+        backdropFilter: 'blur(10px)'
       })
 
       document.body.appendChild(notification)

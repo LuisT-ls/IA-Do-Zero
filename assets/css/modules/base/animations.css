@@ -1,12 +1,59 @@
 /* ===================================================================
-   ANIMATIONS - Animações e transições
+   ANIMAÇÕES CSS - Efeitos visuais e transições
    =================================================================== */
 
-/* Animações de entrada para elementos */
+/* ========================================
+   TRANSIÇÕES DE TEMA
+   ======================================== */
+
+/* Transições suaves para mudança de tema */
+.theme-transitions *,
+.theme-transitions *::before,
+.theme-transitions *::after {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Transições específicas para elementos importantes */
+.theme-transitions body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-transitions .card {
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.theme-transitions .btn {
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-transitions input,
+.theme-transitions textarea,
+.theme-transitions select {
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* ========================================
+   ANIMAÇÕES DE ENTRADA
+   ======================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -17,7 +64,7 @@
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
@@ -28,7 +75,7 @@
 @keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-20px);
   }
   to {
     opacity: 1;
@@ -39,7 +86,7 @@
 @keyframes fadeInRight {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(20px);
   }
   to {
     opacity: 1;
@@ -47,107 +94,11 @@
   }
 }
 
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+/* ========================================
+   ANIMAÇÕES DE ROTAÇÃO
+   ======================================== */
 
-@keyframes slideInFromTop {
-  from {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Classes de animação */
-.animate-in {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.animate-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.animate-in-down {
-  animation: fadeInDown 0.6s ease-out forwards;
-}
-
-.animate-in-left {
-  animation: fadeInLeft 0.6s ease-out forwards;
-}
-
-.animate-in-right {
-  animation: fadeInRight 0.6s ease-out forwards;
-}
-
-.animate-in-scale {
-  animation: scaleIn 0.6s ease-out forwards;
-}
-
-.animate-in-slide {
-  animation: slideInFromTop 0.6s ease-out forwards;
-}
-
-/* Animações para cards */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Animações para botões */
-.btn {
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.6s ease, height 0.6s ease;
-}
-
-.btn:hover::before {
-  width: 300px;
-  height: 300px;
-}
-
-/* Animações para o botão de tema */
-.theme-toggle-btn {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.theme-toggle-btn:hover {
-  transform: translateY(-2px) scale(1.05);
-}
-
-.theme-toggle-btn:active {
-  transform: translateY(0) scale(0.95);
-}
-
-/* Animação de rotação para ícones */
-@keyframes rotate {
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
@@ -156,26 +107,116 @@
   }
 }
 
-.rotate {
-  animation: rotate 1s linear infinite;
+@keyframes spinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 
-/* Animação de pulso */
+/* ========================================
+   ANIMAÇÕES DE ESCALA
+   ======================================== */
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
 @keyframes pulse {
-  0%,
-  100% {
+  0% {
     transform: scale(1);
   }
   50% {
     transform: scale(1.05);
   }
+  100% {
+    transform: scale(1);
+  }
 }
 
-.pulse {
-  animation: pulse 2s ease-in-out infinite;
+/* ========================================
+   ANIMAÇÕES DE DESLIZAMENTO
+   ======================================== */
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
-/* Animação de bounce */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ========================================
+   ANIMAÇÕES DE BRILHO
+   ======================================== */
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  }
+}
+
+/* ========================================
+   ANIMAÇÕES DE BOUNCE
+   ======================================== */
+
 @keyframes bounce {
   0%,
   20%,
@@ -186,72 +227,298 @@
   }
   40%,
   43% {
-    transform: translateY(-10px);
+    transform: translateY(-30px);
   }
   70% {
-    transform: translateY(-5px);
+    transform: translateY(-15px);
   }
   90% {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
   }
 }
 
-.bounce {
-  animation: bounce 1s ease-in-out;
-}
-
-/* Animações de loading */
-@keyframes shimmer {
+@keyframes bounceIn {
   0% {
-    background-position: -200px 0;
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
   }
   100% {
-    background-position: calc(200px + 100%) 0;
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
-.loading-shimmer {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite;
-}
+/* ========================================
+   ANIMAÇÕES DE FLIP
+   ======================================== */
 
-/* Animações para notificações */
-@keyframes slideInRight {
+@keyframes flipInX {
   from {
-    transform: translateX(100%);
+    transform: perspective(400px) rotateX(90deg);
     opacity: 0;
   }
+  40% {
+    transform: perspective(400px) rotateX(-20deg);
+  }
+  60% {
+    transform: perspective(400px) rotateX(10deg);
+  }
+  80% {
+    transform: perspective(400px) rotateX(-5deg);
+  }
   to {
-    transform: translateX(0);
+    transform: perspective(400px) rotateX(0deg);
     opacity: 1;
   }
 }
 
-@keyframes slideOutRight {
+@keyframes flipInY {
   from {
-    transform: translateX(0);
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotateY(-20deg);
+  }
+  60% {
+    transform: perspective(400px) rotateY(10deg);
+  }
+  80% {
+    transform: perspective(400px) rotateY(-5deg);
+  }
+  to {
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   ANIMAÇÕES DE ZOOM
+   ======================================== */
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
     opacity: 1;
   }
   to {
-    transform: translateX(100%);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+
+/* ========================================
+   ANIMAÇÕES DE ROTAÇÃO 3D
+   ======================================== */
+
+@keyframes rotate3d {
+  from {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+/* ========================================
+   ANIMAÇÕES DE TREMOR
+   ======================================== */
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+/* ========================================
+   ANIMAÇÕES DE ROLAGEM
+   ======================================== */
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* ========================================
+   ANIMAÇÕES DE TIPO
+   ======================================== */
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
     opacity: 0;
   }
 }
 
-.notification-enter {
-  animation: slideInRight 0.3s ease-out forwards;
+/* ========================================
+   ANIMAÇÕES DE PARTÍCULAS
+   ======================================== */
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
-.notification-exit {
-  animation: slideOutRight 0.3s ease-out forwards;
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-/* Animações para elementos que aparecem no scroll */
+/* ========================================
+   CLASSES UTILITÁRIAS DE ANIMAÇÃO
+   ======================================== */
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.5s ease-out;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.5s ease-out;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.5s ease-out;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spinReverse 1s linear infinite;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+.animate-scale-out {
+  animation: scaleOut 0.3s ease-in;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.6s ease-out;
+}
+
+.animate-flip-in-x {
+  animation: flipInX 0.6s ease-out;
+}
+
+.animate-flip-in-y {
+  animation: flipInY 0.6s ease-out;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.3s ease-out;
+}
+
+.animate-zoom-out {
+  animation: zoomOut 0.3s ease-in;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+/* ========================================
+   ANIMAÇÕES BASEADAS EM SCROLL
+   ======================================== */
+
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.6s ease-out;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .animate-on-scroll.animate-in {
@@ -259,182 +526,125 @@
   transform: translateY(0);
 }
 
-/* Animações para links */
-a {
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+/* ========================================
+   ANIMAÇÕES DE HOVER
+   ======================================== */
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-a:hover {
-  text-decoration: none;
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Animações para badges */
-.badge {
-  transition: all 0.3s ease;
-}
-
-.badge:hover {
-  transform: scale(1.1);
-}
-
-/* Animações para inputs */
-.form-control {
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-control:focus {
-  transform: translateY(-1px);
-}
-
-/* Animações para modais */
-.modal {
-  transition: opacity 0.3s ease;
-}
-
-.modal.fade .modal-dialog {
+.hover-scale {
   transition: transform 0.3s ease;
 }
 
-/* Animações para tooltips */
-.tooltip {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+.hover-scale:hover {
+  transform: scale(1.05);
 }
 
-/* Animações para dropdowns */
-.dropdown-menu {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+.hover-glow {
+  transition: box-shadow 0.3s ease;
 }
 
-/* Animações para progress bars */
-.progress-bar {
-  transition: width 0.6s ease;
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
-/* Animações para alerts */
-.alert {
-  transition: all 0.3s ease;
+/* ========================================
+   ANIMAÇÕES DE CARREGAMENTO
+   ======================================== */
+
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 1s ease-in-out infinite;
 }
 
-.alert.fade {
-  transition: opacity 0.15s linear;
+.loading-dots {
+  display: inline-block;
 }
 
-/* Animações para collapse */
-.collapse {
-  transition: height 0.35s ease;
+.loading-dots::after {
+  content: '';
+  animation: dots 1.5s steps(5, end) infinite;
 }
 
-/* Animações para carousel */
-.carousel-item {
-  transition: transform 0.6s ease-in-out;
-}
-
-/* Animações para tabs */
-.tab-content > .tab-pane {
-  transition: opacity 0.15s linear;
-}
-
-/* Animações para accordion */
-.accordion-collapse {
-  transition: height 0.35s ease;
-}
-
-/* Animações para spinners */
-.spinner-border {
-  animation: spinner-border 0.75s linear infinite;
-}
-
-@keyframes spinner-border {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Animações para placeholders */
-.placeholder {
-  animation: placeholder-glow 2s ease-in-out infinite;
-}
-
-@keyframes placeholder-glow {
-  50% {
-    opacity: 0.5;
-  }
-}
-
-/* Animações para skeleton loading */
-.skeleton {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite;
-}
-
-/* Animações para elementos de destaque */
-.highlight {
-  animation: highlight 2s ease-in-out;
-}
-
-@keyframes highlight {
+@keyframes dots {
   0%,
-  100% {
-    background-color: transparent;
+  20% {
+    content: '';
   }
-  50% {
-    background-color: rgba(255, 255, 0, 0.3);
+  40% {
+    content: '.';
+  }
+  60% {
+    content: '..';
+  }
+  80%,
+  100% {
+    content: '...';
   }
 }
 
-/* Animações para elementos de erro */
-.shake {
-  animation: shake 0.5s ease-in-out;
+/* ========================================
+   ANIMAÇÕES DE NOTIFICAÇÃO
+   ======================================== */
+
+.notification-enter {
+  animation: slideInRight 0.3s ease-out;
 }
 
-@keyframes shake {
-  0%,
-  100% {
+.notification-exit {
+  animation: slideOutRight 0.3s ease-in;
+}
+
+@keyframes slideOutRight {
+  from {
     transform: translateX(0);
   }
-  25% {
-    transform: translateX(-5px);
-  }
-  75% {
-    transform: translateX(5px);
+  to {
+    transform: translateX(100%);
   }
 }
 
-/* Animações para elementos de sucesso */
-.success-animation {
-  animation: success 0.6s ease-out;
+/* ========================================
+   ANIMAÇÕES DE MODAL
+   ======================================== */
+
+.modal-enter {
+  animation: fadeIn 0.3s ease-out;
 }
 
-@keyframes success {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
+.modal-exit {
+  animation: fadeOut 0.3s ease-in;
+}
+
+@keyframes fadeOut {
+  from {
     opacity: 1;
   }
-}
-
-/* Animações para elementos de aviso */
-.warning-animation {
-  animation: warning 0.6s ease-out;
-}
-
-@keyframes warning {
-  0% {
-    transform: scale(0.8) rotate(-5deg);
+  to {
     opacity: 0;
   }
-  50% {
-    transform: scale(1.1) rotate(5deg);
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
-    opacity: 1;
-  }
+}
+
+/* ========================================
+   ANIMAÇÕES DE TOOLTIP
+   ======================================== */
+
+.tooltip-enter {
+  animation: fadeInUp 0.2s ease-out;
+}
+
+.tooltip-exit {
+  animation: fadeOut 0.2s ease-in;
 }

@@ -15,6 +15,52 @@ header {
   border-bottom: 1px solid var(--border-color);
 }
 
+/* Estilos específicos para header com classes Bootstrap */
+header.bg-dark {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Cores específicas para light mode no header */
+[data-theme='light'] header {
+  background-color: #e8eaed !important;
+  border-bottom: 1px solid #dadce0;
+}
+
+[data-theme='light'] header.bg-dark {
+  background-color: #e8eaed !important;
+}
+
+header.bg-dark h1,
+header.bg-dark h2,
+header.bg-dark h3,
+header.bg-dark h4,
+header.bg-dark h5,
+header.bg-dark h6,
+header.bg-dark p,
+header.bg-dark span,
+header.bg-dark div {
+  color: var(--text-primary) !important;
+}
+
+header.bg-dark .text-white {
+  color: var(--text-primary) !important;
+}
+
+header.bg-dark .lead {
+  color: var(--text-secondary) !important;
+}
+
+/* Estilos específicos para elementos do header */
+header .display-4,
+header .display-5,
+header .display-6 {
+  color: var(--text-primary) !important;
+}
+
+header .lead {
+  color: var(--text-secondary) !important;
+}
+
 /* Cards */
 .card {
   background-color: var(--card-bg);
@@ -75,6 +121,65 @@ footer {
   background-color: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
   color: var(--text-secondary);
+}
+
+/* Estilos específicos para footer com classes Bootstrap */
+footer.bg-dark {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Cores específicas para light mode no footer */
+[data-theme='light'] footer {
+  background-color: #e8eaed !important;
+  border-top: 1px solid #dadce0;
+}
+
+[data-theme='light'] footer.bg-dark {
+  background-color: #e8eaed !important;
+}
+
+footer.bg-dark h1,
+footer.bg-dark h2,
+footer.bg-dark h3,
+footer.bg-dark h4,
+footer.bg-dark h5,
+footer.bg-dark h6,
+footer.bg-dark p,
+footer.bg-dark span,
+footer.bg-dark div,
+footer.bg-dark li,
+footer.bg-dark a {
+  color: var(--text-primary) !important;
+}
+
+footer.bg-dark .text-white {
+  color: var(--text-primary) !important;
+}
+
+footer.bg-dark .text-muted {
+  color: var(--text-muted) !important;
+}
+
+footer.bg-dark .text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+/* Estilos específicos para elementos do footer */
+footer h5,
+footer h6 {
+  color: var(--text-primary) !important;
+}
+
+footer p,
+footer span,
+footer div,
+footer li,
+footer a {
+  color: var(--text-primary) !important;
+}
+
+footer .text-muted {
+  color: var(--text-muted) !important;
 }
 
 /* Badges */

@@ -5,12 +5,12 @@
 /* Tema Claro (padrão) */
 :root {
   --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --bg-tertiary: #e9ecef;
+  --bg-secondary: #e9ecef;
+  --bg-tertiary: #dee2e6;
   --text-primary: #212529;
-  --text-secondary: #6c757d;
-  --text-muted: #868e96;
-  --border-color: #dee2e6;
+  --text-secondary: #495057;
+  --text-muted: #6c757d;
+  --border-color: #ced4da;
   --shadow-color: rgba(0, 0, 0, 0.1);
   --card-bg: #ffffff;
   --input-bg: #ffffff;
