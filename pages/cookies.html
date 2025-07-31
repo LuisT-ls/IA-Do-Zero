@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
   <head>
     <!-- Meta tags essenciais -->
     <meta charset="UTF-8" />
@@ -45,23 +45,6 @@
       type="image/x-icon"
       href="../assets/img/favicon/favicon.ico"
     />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../assets/img/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../assets/img/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../assets/img/favicon/favicon-16x16.png"
-    />
 
     <!-- Bootstrap CSS via CDN -->
     <link
@@ -91,35 +74,32 @@
         letter-spacing: 0.3px;
         font-size: 0.9rem;
       }
-      
+
       .navbar-nav .nav-link:hover {
-        background-color: rgba(255,255,255,0.12) !important;
+        background-color: rgba(255, 255, 255, 0.12) !important;
         transform: translateY(-1px);
-        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
       }
-      
+
       .navbar-nav .nav-link.active {
-        background-color: rgba(255,255,255,0.18) !important;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        background-color: rgba(255, 255, 255, 0.18) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
       }
-      
+
       .navbar-nav .nav-link.active:hover {
-        background-color: rgba(255,255,255,0.22) !important;
+        background-color: rgba(255, 255, 255, 0.22) !important;
       }
-      
+
       .navbar {
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         padding: 0.5rem 0;
       }
-      
+
       .transition-all {
         transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
       }
     </style>
-
-    <!-- Manifest para PWA -->
-    <link rel="manifest" href="../manifest.json" />
 
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
@@ -147,29 +127,52 @@
             Política de Cookies
           </h1>
           <p class="mb-0">
-            Última atualização: <time datetime="2025-07-31">31 de Julho de 2025</time>
+            Última atualização:
+            <time datetime="2025-07-31">31 de Julho de 2025</time>
           </p>
         </div>
       </div>
     </header>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient border-0 shadow-sm" style="background: linear-gradient(135deg, #6c757d 0%, #495057 100%);">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-gradient border-0 shadow-sm"
+      style="background: linear-gradient(135deg, #6c757d 0%, #495057 100%)"
+    >
       <div class="container">
         <div class="navbar-nav mx-auto">
-          <a class="nav-link px-3 py-2 mx-1 rounded-pill transition-all" href="../index.html" style="transition: all 0.25s ease;">
+          <a
+            class="nav-link px-3 py-2 mx-1 rounded-pill transition-all"
+            href="../index.html"
+            style="transition: all 0.25s ease"
+          >
             <i class="fas fa-home me-1"></i>
             Início
           </a>
-          <a class="nav-link px-3 py-2 mx-1 rounded-pill transition-all" href="terms-of-service.html" style="transition: all 0.25s ease;">
+          <a
+            class="nav-link px-3 py-2 mx-1 rounded-pill transition-all"
+            href="terms-of-service.html"
+            style="transition: all 0.25s ease"
+          >
             <i class="fas fa-file-contract me-1"></i>
             Termos de Uso
           </a>
-          <a class="nav-link px-3 py-2 mx-1 rounded-pill transition-all" href="privacy.html" style="transition: all 0.25s ease;">
+          <a
+            class="nav-link px-3 py-2 mx-1 rounded-pill transition-all"
+            href="privacy.html"
+            style="transition: all 0.25s ease"
+          >
             <i class="fas fa-shield-alt me-1"></i>
             Privacidade
           </a>
-          <a class="nav-link active px-3 py-2 mx-1 rounded-pill transition-all" href="cookies.html" style="transition: all 0.25s ease; background-color: rgba(255,255,255,0.18);">
+          <a
+            class="nav-link active px-3 py-2 mx-1 rounded-pill transition-all"
+            href="cookies.html"
+            style="
+              transition: all 0.25s ease;
+              background-color: rgba(255, 255, 255, 0.18);
+            "
+          >
             <i class="fas fa-cookie-bite me-1"></i>
             Cookies
           </a>
@@ -182,437 +185,432 @@
       <div class="container py-5">
         <div class="row justify-content-center">
           <div class="col-lg-10">
-              <!-- Introduction -->
-              <section class="mb-5">
-                <h2 class="h3 text-primary mb-3">
-                  <i class="fas fa-info-circle me-2"></i>
-                  1. Introdução
-                </h2>
-                <div class="section-content">
-                  <p>
-                    A plataforma <strong>IA Do Zero</strong> ("nós", "nosso" ou
-                    "a plataforma") utiliza cookies e tecnologias similares para
-                    melhorar sua experiência de navegação, personalizar conteúdo
-                    e analisar o tráfego do site. Esta Política de Cookies
-                    explica como utilizamos essas tecnologias e suas opções de
-                    controle.
-                  </p>
-                  <p>
-                    Ao continuar navegando em nosso site, você concorda com o
-                    uso de cookies conforme descrito nesta política. Se você não
-                    concordar com o uso de cookies, pode desativá-los através
-                    das configurações do seu navegador.
-                  </p>
+            <!-- Introduction -->
+            <section class="mb-5">
+              <h2 class="h3 text-primary mb-3">
+                <i class="fas fa-info-circle me-2"></i>
+                1. Introdução
+              </h2>
+              <div class="section-content">
+                <p>
+                  A plataforma <strong>IA Do Zero</strong> ("nós", "nosso" ou "a
+                  plataforma") utiliza cookies e tecnologias similares para
+                  melhorar sua experiência de navegação, personalizar conteúdo e
+                  analisar o tráfego do site. Esta Política de Cookies explica
+                  como utilizamos essas tecnologias e suas opções de controle.
+                </p>
+                <p>
+                  Ao continuar navegando em nosso site, você concorda com o uso
+                  de cookies conforme descrito nesta política. Se você não
+                  concordar com o uso de cookies, pode desativá-los através das
+                  configurações do seu navegador.
+                </p>
+              </div>
+            </section>
+
+            <!-- What are Cookies -->
+            <section class="policy-section mb-5">
+              <h2 class="h3 text-primary mb-3">
+                <i class="fas fa-question-circle me-2"></i>
+                2. O que são Cookies?
+              </h2>
+              <div class="section-content">
+                <p>
+                  Cookies são pequenos arquivos de texto que são armazenados no
+                  seu dispositivo (computador, tablet ou smartphone) quando você
+                  visita um website. Eles permitem que o site "lembre" suas
+                  ações e preferências ao longo do tempo, proporcionando uma
+                  experiência mais personalizada e eficiente.
+                </p>
+                <div class="alert alert-info">
+                  <i class="fas fa-lightbulb me-2"></i>
+                  <strong>Dica:</strong> Os cookies não podem executar código ou
+                  transmitir vírus para o seu dispositivo. Eles são seguros e
+                  são utilizados por praticamente todos os sites modernos.
                 </div>
-              </section>
+              </div>
+            </section>
 
-              <!-- What are Cookies -->
-              <section class="policy-section mb-5">
-                <h2 class="section-title">
-                  <i class="fas fa-question-circle me-2"></i>
-                  2. O que são Cookies?
-                </h2>
-                <div class="section-content">
+            <!-- Types of Cookies -->
+            <section class="policy-section mb-5">
+              <h2 class="h3 text-primary mb-3">
+                <i class="fas fa-list me-2"></i>
+                3. Tipos de Cookies que Utilizamos
+              </h2>
+              <div class="section-content">
+                <div class="cookie-type mb-4">
+                  <h3 class="h5 text-primary">
+                    <i class="fas fa-cog me-2"></i>
+                    3.1 Cookies Essenciais
+                  </h3>
                   <p>
-                    Cookies são pequenos arquivos de texto que são armazenados
-                    no seu dispositivo (computador, tablet ou smartphone) quando
-                    você visita um website. Eles permitem que o site "lembre"
-                    suas ações e preferências ao longo do tempo, proporcionando
-                    uma experiência mais personalizada e eficiente.
-                  </p>
-                  <div class="alert alert-info">
-                    <i class="fas fa-lightbulb me-2"></i>
-                    <strong>Dica:</strong> Os cookies não podem executar código
-                    ou transmitir vírus para o seu dispositivo. Eles são seguros
-                    e são utilizados por praticamente todos os sites modernos.
-                  </div>
-                </div>
-              </section>
-
-              <!-- Types of Cookies -->
-              <section class="policy-section mb-5">
-                <h2 class="section-title">
-                  <i class="fas fa-list me-2"></i>
-                  3. Tipos de Cookies que Utilizamos
-                </h2>
-                <div class="section-content">
-                  <div class="cookie-type mb-4">
-                    <h3 class="h5 text-primary">
-                      <i class="fas fa-cog me-2"></i>
-                      3.1 Cookies Essenciais
-                    </h3>
-                    <p>
-                      Estes cookies são necessários para o funcionamento básico
-                      do site e não podem ser desativados. Eles geralmente são
-                      definidos apenas em resposta a ações realizadas por você,
-                      como definir preferências de privacidade, fazer login ou
-                      preencher formulários.
-                    </p>
-                    <ul class="list-unstyled ms-3">
-                      <li>
-                        <i class="fas fa-check text-success me-2"></i
-                        >Preferências de idioma
-                      </li>
-                      <li>
-                        <i class="fas fa-check text-success me-2"></i
-                        >Configurações de tema (claro/escuro)
-                      </li>
-                      <li>
-                        <i class="fas fa-check text-success me-2"></i>Estado de
-                        login
-                      </li>
-                      <li>
-                        <i class="fas fa-check text-success me-2"></i
-                        >Configurações de acessibilidade
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="cookie-type mb-4">
-                    <h3 class="h5 text-primary">
-                      <i class="fas fa-chart-line me-2"></i>
-                      3.2 Cookies de Análise e Desempenho
-                    </h3>
-                    <p>
-                      Estes cookies nos permitem contar visitas e fontes de
-                      tráfego para que possamos medir e melhorar o desempenho do
-                      nosso site. Eles nos ajudam a saber quais páginas são as
-                      mais e menos populares e ver como os visitantes navegam
-                      pelo site.
-                    </p>
-                    <ul class="list-unstyled ms-3">
-                      <li>
-                        <i class="fas fa-chart-bar text-info me-2"></i>Google
-                        Analytics (anônimo)
-                      </li>
-                      <li>
-                        <i class="fas fa-chart-bar text-info me-2"></i>Métricas
-                        de desempenho da página
-                      </li>
-                      <li>
-                        <i class="fas fa-chart-bar text-info me-2"></i>Análise
-                        de comportamento do usuário
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="cookie-type mb-4">
-                    <h3 class="h5 text-primary">
-                      <i class="fas fa-user-cog me-2"></i>
-                      3.3 Cookies de Funcionalidade
-                    </h3>
-                    <p>
-                      Estes cookies permitem que o site forneça funcionalidades
-                      e personalização aprimoradas. Eles podem ser definidos por
-                      nós ou por provedores terceiros cujos serviços adicionamos
-                      às nossas páginas.
-                    </p>
-                    <ul class="list-unstyled ms-3">
-                      <li>
-                        <i class="fas fa-star text-warning me-2"></i
-                        >Preferências de conteúdo
-                      </li>
-                      <li>
-                        <i class="fas fa-star text-warning me-2"></i>Progresso
-                        de aprendizado
-                      </li>
-                      <li>
-                        <i class="fas fa-star text-warning me-2"></i
-                        >Configurações de notificações
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="cookie-type mb-4">
-                    <h3 class="h5 text-primary">
-                      <i class="fas fa-ad me-2"></i>
-                      3.4 Cookies de Marketing (se aplicável)
-                    </h3>
-                    <p>
-                      Estes cookies podem ser definidos através do nosso site
-                      por nossos parceiros de publicidade. Eles podem ser usados
-                      por essas empresas para construir um perfil de seus
-                      interesses e mostrar anúncios relevantes em outros sites.
-                    </p>
-                    <div class="alert alert-warning">
-                      <i class="fas fa-exclamation-triangle me-2"></i>
-                      <strong>Nota:</strong> Atualmente, não utilizamos cookies
-                      de marketing em nossa plataforma educativa.
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <!-- Third-party Cookies -->
-              <section class="policy-section mb-5">
-                <h2 class="section-title">
-                  <i class="fas fa-external-link-alt me-2"></i>
-                  4. Cookies de Terceiros
-                </h2>
-                <div class="section-content">
-                  <p>
-                    Nossa plataforma pode utilizar serviços de terceiros que
-                    também definem cookies. Estes serviços incluem:
-                  </p>
-
-                  <div class="third-party-service mb-3">
-                    <h4 class="h6 fw-bold">Google Analytics</h4>
-                    <p class="mb-2">
-                      Utilizamos o Google Analytics para analisar o uso do site.
-                      O Google Analytics coleta informações de forma anônima,
-                      incluindo o número de visitantes do site, de onde os
-                      visitantes vieram e as páginas que visitaram.
-                    </p>
-                    <p class="mb-0">
-                      <strong>Política de Privacidade do Google:</strong>
-                      <a
-                        href="https://policies.google.com/privacy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        https://policies.google.com/privacy
-                      </a>
-                    </p>
-                  </div>
-
-                  <div class="third-party-service mb-3">
-                    <h4 class="h6 fw-bold">Bootstrap e FontAwesome</h4>
-                    <p class="mb-2">
-                      Utilizamos CDNs do Bootstrap e FontAwesome para carregar
-                      estilos e ícones. Estes serviços podem definir cookies
-                      para otimizar o carregamento de recursos.
-                    </p>
-                    <p class="mb-0">
-                      <strong>Política de Privacidade do Bootstrap:</strong>
-                      <a
-                        href="https://getbootstrap.com/docs/5.3/getting-started/privacy/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        https://getbootstrap.com/docs/5.3/getting-started/privacy/
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </section>
-
-              <!-- Cookie Management -->
-              <section class="policy-section mb-5">
-                <h2 class="section-title">
-                  <i class="fas fa-sliders-h me-2"></i>
-                  5. Gerenciamento de Cookies
-                </h2>
-                <div class="section-content">
-                  <p>
-                    Você tem várias opções para gerenciar cookies em seu
-                    dispositivo:
-                  </p>
-
-                  <div class="management-option mb-4">
-                    <h3 class="h5 text-primary">
-                      <i class="fas fa-browser me-2"></i>
-                      5.1 Configurações do Navegador
-                    </h3>
-                    <p>
-                      A maioria dos navegadores permite que você controle
-                      cookies através de suas configurações. Você pode:
-                    </p>
-                    <ul class="list-unstyled ms-3">
-                      <li>
-                        <i class="fas fa-check-circle text-success me-2"></i>Ver
-                        quais cookies estão armazenados
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle text-success me-2"></i
-                        >Excluir cookies existentes
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle text-success me-2"></i
-                        >Bloquear cookies futuros
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle text-success me-2"></i
-                        >Configurar alertas quando cookies são definidos
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="management-option mb-4">
-                    <h3 class="h5 text-primary">
-                      <i class="fas fa-mobile-alt me-2"></i>
-                      5.2 Dispositivos Móveis
-                    </h3>
-                    <p>
-                      Em dispositivos móveis, você pode gerenciar cookies
-                      através das configurações do navegador ou aplicativo.
-                      Consulte a documentação do seu dispositivo para instruções
-                      específicas.
-                    </p>
-                  </div>
-
-                  <div class="alert alert-info">
-                    <i class="fas fa-info-circle me-2"></i>
-                    <strong>Importante:</strong> Desativar cookies pode afetar a
-                    funcionalidade do site. Algumas funcionalidades podem não
-                    funcionar corretamente se os cookies essenciais forem
-                    desabilitados.
-                  </div>
-                </div>
-              </section>
-
-              <!-- Data Retention -->
-              <section class="policy-section mb-5">
-                <h2 class="section-title">
-                  <i class="fas fa-clock me-2"></i>
-                  6. Retenção de Dados
-                </h2>
-                <div class="section-content">
-                  <p>Os cookies têm diferentes períodos de duração:</p>
-
-                  <div class="retention-info">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="card h-100">
-                          <div class="card-body">
-                            <h5 class="card-title text-primary">
-                              <i class="fas fa-session me-2"></i>
-                              Cookies de Sessão
-                            </h5>
-                            <p class="card-text">
-                              São excluídos automaticamente quando você fecha o
-                              navegador.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="card h-100">
-                          <div class="card-body">
-                            <h5 class="card-title text-primary">
-                              <i class="fas fa-calendar me-2"></i>
-                              Cookies Persistentes
-                            </h5>
-                            <p class="card-text">
-                              Permanecem no seu dispositivo por um período
-                              específico ou até serem excluídos manualmente.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <!-- Updates -->
-              <section class="policy-section mb-5">
-                <h2 class="section-title">
-                  <i class="fas fa-sync-alt me-2"></i>
-                  7. Atualizações desta Política
-                </h2>
-                <div class="section-content">
-                  <p>
-                    Podemos atualizar esta Política de Cookies periodicamente
-                    para refletir mudanças em nossas práticas ou por outros
-                    motivos operacionais, legais ou regulamentares. Quando
-                    fizermos alterações significativas, notificaremos você
-                    através de:
+                    Estes cookies são necessários para o funcionamento básico do
+                    site e não podem ser desativados. Eles geralmente são
+                    definidos apenas em resposta a ações realizadas por você,
+                    como definir preferências de privacidade, fazer login ou
+                    preencher formulários.
                   </p>
                   <ul class="list-unstyled ms-3">
                     <li>
-                      <i class="fas fa-bell text-warning me-2"></i>Banner de
-                      notificação no site
+                      <i class="fas fa-check text-success me-2"></i>Preferências
+                      de idioma
                     </li>
                     <li>
-                      <i class="fas fa-envelope text-info me-2"></i>Email (se
-                      você for um usuário registrado)
+                      <i class="fas fa-check text-success me-2"></i
+                      >Configurações de tema (claro/escuro)
                     </li>
                     <li>
-                      <i class="fas fa-calendar-alt text-success me-2"></i
-                      >Atualização da data no topo desta página
+                      <i class="fas fa-check text-success me-2"></i>Estado de
+                      login
+                    </li>
+                    <li>
+                      <i class="fas fa-check text-success me-2"></i
+                      >Configurações de acessibilidade
                     </li>
                   </ul>
+                </div>
+
+                <div class="cookie-type mb-4">
+                  <h3 class="h5 text-primary">
+                    <i class="fas fa-chart-line me-2"></i>
+                    3.2 Cookies de Análise e Desempenho
+                  </h3>
                   <p>
-                    Recomendamos que você revise esta política regularmente para
-                    se manter informado sobre como utilizamos cookies.
+                    Estes cookies nos permitem contar visitas e fontes de
+                    tráfego para que possamos medir e melhorar o desempenho do
+                    nosso site. Eles nos ajudam a saber quais páginas são as
+                    mais e menos populares e ver como os visitantes navegam pelo
+                    site.
+                  </p>
+                  <ul class="list-unstyled ms-3">
+                    <li>
+                      <i class="fas fa-chart-bar text-info me-2"></i>Google
+                      Analytics (anônimo)
+                    </li>
+                    <li>
+                      <i class="fas fa-chart-bar text-info me-2"></i>Métricas de
+                      desempenho da página
+                    </li>
+                    <li>
+                      <i class="fas fa-chart-bar text-info me-2"></i>Análise de
+                      comportamento do usuário
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="cookie-type mb-4">
+                  <h3 class="h5 text-primary">
+                    <i class="fas fa-user-cog me-2"></i>
+                    3.3 Cookies de Funcionalidade
+                  </h3>
+                  <p>
+                    Estes cookies permitem que o site forneça funcionalidades e
+                    personalização aprimoradas. Eles podem ser definidos por nós
+                    ou por provedores terceiros cujos serviços adicionamos às
+                    nossas páginas.
+                  </p>
+                  <ul class="list-unstyled ms-3">
+                    <li>
+                      <i class="fas fa-star text-warning me-2"></i>Preferências
+                      de conteúdo
+                    </li>
+                    <li>
+                      <i class="fas fa-star text-warning me-2"></i>Progresso de
+                      aprendizado
+                    </li>
+                    <li>
+                      <i class="fas fa-star text-warning me-2"></i>Configurações
+                      de notificações
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="cookie-type mb-4">
+                  <h3 class="h5 text-primary">
+                    <i class="fas fa-ad me-2"></i>
+                    3.4 Cookies de Marketing (se aplicável)
+                  </h3>
+                  <p>
+                    Estes cookies podem ser definidos através do nosso site por
+                    nossos parceiros de publicidade. Eles podem ser usados por
+                    essas empresas para construir um perfil de seus interesses e
+                    mostrar anúncios relevantes em outros sites.
+                  </p>
+                  <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    <strong>Nota:</strong> Atualmente, não utilizamos cookies de
+                    marketing em nossa plataforma educativa.
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Third-party Cookies -->
+            <section class="policy-section mb-5">
+              <h2 class="h3 text-primary mb-3">
+                <i class="fas fa-external-link-alt me-2"></i>
+                4. Cookies de Terceiros
+              </h2>
+              <div class="section-content">
+                <p>
+                  Nossa plataforma pode utilizar serviços de terceiros que
+                  também definem cookies. Estes serviços incluem:
+                </p>
+
+                <div class="third-party-service mb-3">
+                  <h4 class="h6 fw-bold">Google Analytics</h4>
+                  <p class="mb-2">
+                    Utilizamos o Google Analytics para analisar o uso do site. O
+                    Google Analytics coleta informações de forma anônima,
+                    incluindo o número de visitantes do site, de onde os
+                    visitantes vieram e as páginas que visitaram.
+                  </p>
+                  <p class="mb-0">
+                    <strong>Política de Privacidade do Google:</strong>
+                    <a
+                      href="https://policies.google.com/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      https://policies.google.com/privacy
+                    </a>
                   </p>
                 </div>
-              </section>
 
-              <!-- Contact -->
-              <section class="policy-section mb-5">
-                <h2 class="section-title">
-                  <i class="fas fa-envelope me-2"></i>
-                  8. Contato
-                </h2>
-                <div class="section-content">
-                  <p>
-                    Se você tiver dúvidas sobre esta Política de Cookies ou
-                    sobre como utilizamos cookies, entre em contato conosco:
+                <div class="third-party-service mb-3">
+                  <h4 class="h6 fw-bold">Bootstrap e FontAwesome</h4>
+                  <p class="mb-2">
+                    Utilizamos CDNs do Bootstrap e FontAwesome para carregar
+                    estilos e ícones. Estes serviços podem definir cookies para
+                    otimizar o carregamento de recursos.
                   </p>
+                  <p class="mb-0">
+                    <strong>Política de Privacidade do Bootstrap:</strong>
+                    <a
+                      href="https://getbootstrap.com/docs/5.3/getting-started/privacy/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      https://getbootstrap.com/docs/5.3/getting-started/privacy/
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </section>
 
-                  <div class="contact-info">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="contact-item mb-3">
-                          <i class="fas fa-user me-2 text-primary"></i>
-                          <strong>Responsável:</strong> Luis Antonio Souza
-                          Teixeira
-                        </div>
-                        <div class="contact-item mb-3">
-                          <i class="fas fa-globe me-2 text-primary"></i>
-                          <strong>Website:</strong>
-                          <a
-                            href="https://iadozero.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            https://iadozero.com
-                          </a>
+            <!-- Cookie Management -->
+            <section class="policy-section mb-5">
+              <h2 class="h3 text-primary mb-3">
+                <i class="fas fa-sliders-h me-2"></i>
+                5. Gerenciamento de Cookies
+              </h2>
+              <div class="section-content">
+                <p>
+                  Você tem várias opções para gerenciar cookies em seu
+                  dispositivo:
+                </p>
+
+                <div class="management-option mb-4">
+                  <h3 class="h5 text-primary">
+                    <i class="fas fa-browser me-2"></i>
+                    5.1 Configurações do Navegador
+                  </h3>
+                  <p>
+                    A maioria dos navegadores permite que você controle cookies
+                    através de suas configurações. Você pode:
+                  </p>
+                  <ul class="list-unstyled ms-3">
+                    <li>
+                      <i class="fas fa-check-circle text-success me-2"></i>Ver
+                      quais cookies estão armazenados
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle text-success me-2"></i
+                      >Excluir cookies existentes
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle text-success me-2"></i
+                      >Bloquear cookies futuros
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle text-success me-2"></i
+                      >Configurar alertas quando cookies são definidos
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="management-option mb-4">
+                  <h3 class="h5 text-primary">
+                    <i class="fas fa-mobile-alt me-2"></i>
+                    5.2 Dispositivos Móveis
+                  </h3>
+                  <p>
+                    Em dispositivos móveis, você pode gerenciar cookies através
+                    das configurações do navegador ou aplicativo. Consulte a
+                    documentação do seu dispositivo para instruções específicas.
+                  </p>
+                </div>
+
+                <div class="alert alert-info">
+                  <i class="fas fa-info-circle me-2"></i>
+                  <strong>Importante:</strong> Desativar cookies pode afetar a
+                  funcionalidade do site. Algumas funcionalidades podem não
+                  funcionar corretamente se os cookies essenciais forem
+                  desabilitados.
+                </div>
+              </div>
+            </section>
+
+            <!-- Data Retention -->
+            <section class="policy-section mb-5">
+              <h2 class="h3 text-primary mb-3">
+                <i class="fas fa-clock me-2"></i>
+                6. Retenção de Dados
+              </h2>
+              <div class="section-content">
+                <p>Os cookies têm diferentes períodos de duração:</p>
+
+                <div class="retention-info">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title text-primary">
+                            <i class="fas fa-history me-2"></i>
+                            Cookies de Sessão
+                          </h5>
+                          <p class="card-text">
+                            São excluídos automaticamente quando você fecha o
+                            navegador.
+                          </p>
                         </div>
                       </div>
-                      <div class="col-md-6">
-                        <div class="contact-item mb-3">
-                          <i class="fas fa-envelope me-2 text-primary"></i>
-                          <strong>E-mail:</strong>
-                          <a href="mailto:contato@iadozero.com">
-                            contato@iadozero.com
-                          </a>
-                        </div>
-                        <div class="contact-item mb-3">
-                          <i class="fas fa-calendar me-2 text-primary"></i>
-                          <strong>Última atualização:</strong> 15 de Janeiro de
-                          2024
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title text-primary">
+                            <i class="fas fa-calendar me-2"></i>
+                            Cookies Persistentes
+                          </h5>
+                          <p class="card-text">
+                            Permanecem no seu dispositivo por um período
+                            específico ou até serem excluídos manualmente.
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </section>
-            </div>
+              </div>
+            </section>
 
-            <!-- Navigation Buttons -->
-            <div class="navigation-buttons text-center mt-5">
-              <a href="../index.html" class="btn btn-outline-primary me-3">
-                <i class="fas fa-home me-2"></i>
-                Voltar ao Início
-              </a>
-              <a href="./privacy.html" class="btn btn-outline-secondary me-3">
-                <i class="fas fa-shield-alt me-2"></i>
-                Política de Privacidade
-              </a>
-              <a href="./terms-of-service.html" class="btn btn-outline-info">
-                <i class="fas fa-file-contract me-2"></i>
-                Termos de Serviço
-              </a>
-            </div>
+            <!-- Updates -->
+            <section class="policy-section mb-5">
+              <h2 class="h3 text-primary mb-3">
+                <i class="fas fa-sync-alt me-2"></i>
+                7. Atualizações desta Política
+              </h2>
+              <div class="section-content">
+                <p>
+                  Podemos atualizar esta Política de Cookies periodicamente para
+                  refletir mudanças em nossas práticas ou por outros motivos
+                  operacionais, legais ou regulamentares. Quando fizermos
+                  alterações significativas, notificaremos você através de:
+                </p>
+                <ul class="list-unstyled ms-3">
+                  <li>
+                    <i class="fas fa-bell text-warning me-2"></i>Banner de
+                    notificação no site
+                  </li>
+                  <li>
+                    <i class="fas fa-envelope text-info me-2"></i>Email (se você
+                    for um usuário registrado)
+                  </li>
+                  <li>
+                    <i class="fas fa-calendar-alt text-success me-2"></i
+                    >Atualização da data no topo desta página
+                  </li>
+                </ul>
+                <p>
+                  Recomendamos que você revise esta política regularmente para
+                  se manter informado sobre como utilizamos cookies.
+                </p>
+              </div>
+            </section>
+
+            <!-- Contact -->
+            <section class="policy-section mb-5">
+              <h2 class="h3 text-primary mb-3">
+                <i class="fas fa-envelope me-2"></i>
+                8. Contato
+              </h2>
+              <div class="section-content">
+                <p>
+                  Se você tiver dúvidas sobre esta Política de Cookies ou sobre
+                  como utilizamos cookies, entre em contato conosco:
+                </p>
+
+                <div class="contact-info">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="contact-item mb-3">
+                        <i class="fas fa-user me-2 text-primary"></i>
+                        <strong>Responsável:</strong> Luis Antonio Souza
+                        Teixeira
+                      </div>
+                      <div class="contact-item mb-3">
+                        <i class="fas fa-globe me-2 text-primary"></i>
+                        <strong>Website:</strong>
+                        <a
+                          href="https://iadozero.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          https://iadozero.com
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="contact-item mb-3">
+                        <i class="fas fa-envelope me-2 text-primary"></i>
+                        <strong>E-mail:</strong>
+                        <a href="mailto:contato@iadozero.com">
+                          contato@iadozero.com
+                        </a>
+                      </div>
+                      <div class="contact-item mb-3">
+                        <i class="fas fa-calendar me-2 text-primary"></i>
+                        <strong>Última atualização:</strong> 31 de Julho de 2025
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="navigation-buttons text-center mt-5">
+            <a href="../index.html" class="btn btn-outline-primary me-3">
+              <i class="fas fa-home me-2"></i>
+              Voltar ao Início
+            </a>
+            <a href="./privacy.html" class="btn btn-outline-secondary me-3">
+              <i class="fas fa-shield-alt me-2"></i>
+              Política de Privacidade
+            </a>
+            <a href="./terms-of-service.html" class="btn btn-outline-info">
+              <i class="fas fa-file-contract me-2"></i>
+              Termos de Serviço
+            </a>
           </div>
         </div>
       </div>
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-5">
+    <footer class="footer bg-dark text-light py-4 mt-5">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -627,7 +625,9 @@
           </div>
           <div class="col-md-6 text-md-end">
             <p class="mb-1">
-              <small>&copy; 2025 IA Do Zero. Todos os direitos reservados.</small>
+              <small
+                >&copy; 2025 IA Do Zero. Todos os direitos reservados.</small
+              >
             </p>
             <div class="footer-links">
               <a href="terms-of-service.html">
