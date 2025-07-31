@@ -120,8 +120,87 @@
     </script>
 
     <style>
+      /* Estilos para os cards */
+      .card {
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-title.h5 {
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .card-text {
+        line-height: 1.6;
+      }
+
+      /* Estilos para os modais */
+      .modal-content {
+        border-radius: 15px;
+        border: none;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      }
+
+      .modal-header {
+        border-bottom: 2px solid #f8f9fa;
+        border-radius: 15px 15px 0 0;
+      }
+
+      .modal-title {
+        font-weight: 700;
+        color: var(--bs-primary);
+      }
+
+      .modal-body h6 {
+        color: var(--bs-primary);
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .modal-body ul {
+        padding-left: 1.2rem;
+      }
+
+      .modal-body li {
+        margin-bottom: 0.5rem;
+      }
+
+      /* Efeitos de destaque para cards clicados */
+      .card-highlight {
+        animation: cardPulse 0.3s ease-in-out;
+      }
+
+      @keyframes cardPulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
       .card-title.h5 {
         color: #f0f0f0;
+      }
+
+      /* Estilos para modo escuro nos modais */
+      [data-theme='dark'] .modal-body p,
+      [data-theme='dark'] .modal-body li,
+      [data-theme='dark'] .modal-body h6 {
+        color: #212529 !important;
+      }
+
+      [data-theme='dark'] .modal-body strong {
+        color: #000 !important;
       }
     </style>
   </head>
@@ -1016,5 +1095,1141 @@
       type="module"
       src="../../js/modules/topics/topic01-fundamentos.js"
     ></script>
+
+    <!-- Modais para conteúdo detalhado dos cards -->
+
+    <!-- Modal Assistente Virtual -->
+    <div
+      class="modal fade"
+      id="modalAssistenteVirtual"
+      tabindex="-1"
+      aria-labelledby="modalAssistenteVirtualLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalAssistenteVirtualLabel">
+              <i class="fas fa-robot text-primary me-2"></i>Assistente Virtual
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">O que são?</h6>
+                <p>
+                  Sistemas de IA que podem entender e responder a comandos de
+                  voz ou texto, simulando uma conversa natural com humanos.
+                </p>
+
+                <h6 class="fw-bold">Principais exemplos:</h6>
+                <ul>
+                  <li>
+                    <strong>Siri</strong> (Apple) - Assistente integrado ao iOS
+                  </li>
+                  <li>
+                    <strong>Alexa</strong> (Amazon) - Assistente para casa
+                    inteligente
+                  </li>
+                  <li>
+                    <strong>Google Assistant</strong> - Assistente do Google
+                  </li>
+                  <li>
+                    <strong>Cortana</strong> (Microsoft) - Assistente do Windows
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Tecnologias utilizadas:</h6>
+                <ul>
+                  <li>Processamento de Linguagem Natural (NLP)</li>
+                  <li>Reconhecimento de Voz</li>
+                  <li>Síntese de Voz</li>
+                  <li>Machine Learning</li>
+                  <li>APIs de serviços externos</li>
+                </ul>
+
+                <h6 class="fw-bold">Aplicações:</h6>
+                <ul>
+                  <li>Controle de dispositivos domésticos</li>
+                  <li>Busca de informações</li>
+                  <li>Agendamento e lembretes</li>
+                  <li>Reprodução de mídia</li>
+                  <li>Navegação e localização</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Carros Autônomos -->
+    <div
+      class="modal fade"
+      id="modalCarrosAutonomos"
+      tabindex="-1"
+      aria-labelledby="modalCarrosAutonomosLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalCarrosAutonomosLabel">
+              <i class="fas fa-car text-success me-2"></i>Carros Autônomos
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">Definição:</h6>
+                <p>
+                  Veículos capazes de navegar e operar sem intervenção humana,
+                  usando sensores, câmeras e algoritmos de IA para tomar
+                  decisões de direção.
+                </p>
+
+                <h6 class="fw-bold">Níveis de Automação:</h6>
+                <ul>
+                  <li><strong>Nível 0:</strong> Sem automação</li>
+                  <li><strong>Nível 1:</strong> Assistência ao motorista</li>
+                  <li><strong>Nível 2:</strong> Automação parcial</li>
+                  <li><strong>Nível 3:</strong> Automação condicional</li>
+                  <li><strong>Nível 4:</strong> Alta automação</li>
+                  <li><strong>Nível 5:</strong> Automação completa</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Tecnologias principais:</h6>
+                <ul>
+                  <li>LIDAR (Light Detection and Ranging)</li>
+                  <li>Câmeras de alta resolução</li>
+                  <li>Radar e sonar</li>
+                  <li>GPS de alta precisão</li>
+                  <li>Mapas 3D detalhados</li>
+                  <li>Algoritmos de Machine Learning</li>
+                </ul>
+
+                <h6 class="fw-bold">Empresas líderes:</h6>
+                <ul>
+                  <li>Tesla</li>
+                  <li>Waymo (Google)</li>
+                  <li>Uber</li>
+                  <li>General Motors</li>
+                  <li>BMW</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal IA Fraca -->
+    <div
+      class="modal fade"
+      id="modalIAFraca"
+      tabindex="-1"
+      aria-labelledby="modalIAFracaLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalIAFracaLabel">
+              <i class="fas fa-cogs text-warning me-2"></i>IA Fraca (Narrow AI)
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">Características:</h6>
+                <ul>
+                  <li>Especializada em tarefas específicas</li>
+                  <li>Alto desempenho em domínios limitados</li>
+                  <li>Não possui consciência</li>
+                  <li>Baseada em algoritmos e dados</li>
+                  <li>Mais comum atualmente</li>
+                </ul>
+
+                <h6 class="fw-bold">Exemplos práticos:</h6>
+                <ul>
+                  <li>Reconhecimento facial</li>
+                  <li>Tradução automática</li>
+                  <li>Recomendações de produtos</li>
+                  <li>Diagnóstico médico</li>
+                  <li>Jogos de xadrez</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Vantagens:</h6>
+                <ul>
+                  <li>Alta eficiência em tarefas específicas</li>
+                  <li>Menor custo de desenvolvimento</li>
+                  <li>Resultados previsíveis</li>
+                  <li>Fácil implementação</li>
+                </ul>
+
+                <h6 class="fw-bold">Limitações:</h6>
+                <ul>
+                  <li>Incapaz de generalizar</li>
+                  <li>Dependente de dados de treinamento</li>
+                  <li>Vulnerável a ataques adversariais</li>
+                  <li>Falta de compreensão real</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal IA Forte -->
+    <div
+      class="modal fade"
+      id="modalIAForte"
+      tabindex="-1"
+      aria-labelledby="modalIAForteLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalIAForteLabel">
+              <i class="fas fa-brain text-danger me-2"></i>IA Forte (Strong AI)
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">Definição:</h6>
+                <p>
+                  IA com capacidade cognitiva equivalente ou superior à humana,
+                  incluindo consciência, autoconsciência e compreensão genuína.
+                </p>
+
+                <h6 class="fw-bold">Características teóricas:</h6>
+                <ul>
+                  <li>Consciência e autoconsciência</li>
+                  <li>Compreensão genuína</li>
+                  <li>Capacidade de raciocínio abstrato</li>
+                  <li>Emoções e sentimentos</li>
+                  <li>Intencionalidade</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Desafios filosóficos:</h6>
+                <ul>
+                  <li>Problema da consciência</li>
+                  <li>Teste de Turing</li>
+                  <li>Quarto chinês (Searle)</li>
+                  <li>Problema mente-corpo</li>
+                  <li>Ética da IA</li>
+                </ul>
+
+                <h6 class="fw-bold">Status atual:</h6>
+                <p>
+                  A IA Forte ainda é teórica e não foi alcançada. Existe debate
+                  sobre se é possível criar consciência artificial e como medir
+                  isso.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal IA Geral -->
+    <div
+      class="modal fade"
+      id="modalIAGeral"
+      tabindex="-1"
+      aria-labelledby="modalIAGeralLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalIAGeralLabel">
+              <i class="fas fa-star text-success me-2"></i>IA Geral (AGI)
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">Definição:</h6>
+                <p>
+                  IA que pode aprender e executar qualquer tarefa intelectual
+                  que um ser humano pode realizar, com capacidade de
+                  transferência de conhecimento entre domínios.
+                </p>
+
+                <h6 class="fw-bold">Características:</h6>
+                <ul>
+                  <li>Aprendizado geral</li>
+                  <li>Transferência de conhecimento</li>
+                  <li>Adaptação a novos contextos</li>
+                  <li>Raciocínio abstrato</li>
+                  <li>Criatividade</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Aplicações potenciais:</h6>
+                <ul>
+                  <li>Pesquisa científica</li>
+                  <li>Resolução de problemas complexos</li>
+                  <li>Educação personalizada</li>
+                  <li>Exploração espacial</li>
+                  <li>Desenvolvimento de tecnologia</li>
+                </ul>
+
+                <h6 class="fw-bold">Estimativas de desenvolvimento:</h6>
+                <p>
+                  Especialistas estimam que a AGI pode ser desenvolvida entre
+                  2030-2100, mas há grande incerteza sobre o timeline.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Machine Learning -->
+    <div
+      class="modal fade"
+      id="modalMachineLearning"
+      tabindex="-1"
+      aria-labelledby="modalMachineLearningLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalMachineLearningLabel">
+              <i class="fas fa-chart-line text-primary me-2"></i>Machine
+              Learning
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">Definição:</h6>
+                <p>
+                  Subcampo da IA que permite aos computadores aprender e
+                  melhorar automaticamente através da experiência, sem serem
+                  explicitamente programados.
+                </p>
+
+                <h6 class="fw-bold">Tipos principais:</h6>
+                <ul>
+                  <li>
+                    <strong>Supervisionado:</strong> Aprende com dados rotulados
+                  </li>
+                  <li>
+                    <strong>Não supervisionado:</strong> Encontra padrões em
+                    dados não rotulados
+                  </li>
+                  <li>
+                    <strong>Por reforço:</strong> Aprende através de tentativa e
+                    erro
+                  </li>
+                  <li>
+                    <strong>Semi-supervisionado:</strong> Combina dados
+                    rotulados e não rotulados
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Algoritmos populares:</h6>
+                <ul>
+                  <li>Redes Neurais</li>
+                  <li>Random Forest</li>
+                  <li>Support Vector Machines</li>
+                  <li>K-Means Clustering</li>
+                  <li>Linear Regression</li>
+                  <li>Decision Trees</li>
+                </ul>
+
+                <h6 class="fw-bold">Aplicações:</h6>
+                <ul>
+                  <li>Reconhecimento de imagem</li>
+                  <li>Processamento de linguagem natural</li>
+                  <li>Sistemas de recomendação</li>
+                  <li>Detecção de fraude</li>
+                  <li>Diagnóstico médico</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal NLP -->
+    <div
+      class="modal fade"
+      id="modalNLP"
+      tabindex="-1"
+      aria-labelledby="modalNLPLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalNLPLabel">
+              <i class="fas fa-comments text-success me-2"></i>Processamento de
+              Linguagem Natural (NLP)
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">Definição:</h6>
+                <p>
+                  Campo da IA que permite aos computadores entender, interpretar
+                  e gerar linguagem humana de forma natural.
+                </p>
+
+                <h6 class="fw-bold">Tarefas principais:</h6>
+                <ul>
+                  <li>Análise de sentimento</li>
+                  <li>Tradução automática</li>
+                  <li>Resumo de texto</li>
+                  <li>Reconhecimento de entidades</li>
+                  <li>Geração de texto</li>
+                  <li>Classificação de documentos</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Tecnologias:</h6>
+                <ul>
+                  <li>Tokenização</li>
+                  <li>Lematização</li>
+                  <li>Part-of-speech tagging</li>
+                  <li>Named Entity Recognition</li>
+                  <li>Word embeddings</li>
+                  <li>Transformers (BERT, GPT)</li>
+                </ul>
+
+                <h6 class="fw-bold">Aplicações:</h6>
+                <ul>
+                  <li>Chatbots</li>
+                  <li>Assistentes virtuais</li>
+                  <li>Análise de feedback</li>
+                  <li>Busca semântica</li>
+                  <li>Automação de atendimento</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Visão Computacional -->
+    <div
+      class="modal fade"
+      id="modalVisaoComputacional"
+      tabindex="-1"
+      aria-labelledby="modalVisaoComputacionalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalVisaoComputacionalLabel">
+              <i class="fas fa-eye text-info me-2"></i>Visão Computacional
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">Definição:</h6>
+                <p>
+                  Campo da IA que permite aos computadores extrair informações
+                  significativas de imagens e vídeos, interpretando o mundo
+                  visual.
+                </p>
+
+                <h6 class="fw-bold">Tarefas principais:</h6>
+                <ul>
+                  <li>Reconhecimento de objetos</li>
+                  <li>Detecção de faces</li>
+                  <li>Segmentação de imagem</li>
+                  <li>Classificação de imagens</li>
+                  <li>Reconhecimento de texto (OCR)</li>
+                  <li>Análise de movimento</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Tecnologias:</h6>
+                <ul>
+                  <li>Redes Neurais Convolucionais (CNN)</li>
+                  <li>Detecção de bordas</li>
+                  <li>Filtros de imagem</li>
+                  <li>Processamento de cores</li>
+                  <li>Geometria computacional</li>
+                  <li>Deep Learning</li>
+                </ul>
+
+                <h6 class="fw-bold">Aplicações:</h6>
+                <ul>
+                  <li>Carros autônomos</li>
+                  <li>Segurança e vigilância</li>
+                  <li>Diagnóstico médico</li>
+                  <li>Realidade aumentada</li>
+                  <li>Controle de qualidade</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Robótica -->
+    <div
+      class="modal fade"
+      id="modalRobotica"
+      tabindex="-1"
+      aria-labelledby="modalRoboticaLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalRoboticaLabel">
+              <i class="fas fa-robot text-warning me-2"></i>Robótica
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">Definição:</h6>
+                <p>
+                  Campo que combina IA com mecânica e eletrônica para criar
+                  sistemas físicos autônomos que podem interagir com o ambiente.
+                </p>
+
+                <h6 class="fw-bold">Tipos de robôs:</h6>
+                <ul>
+                  <li>Robôs industriais</li>
+                  <li>Robôs de serviço</li>
+                  <li>Robôs médicos</li>
+                  <li>Drones</li>
+                  <li>Robôs humanoides</li>
+                  <li>Robôs educacionais</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Componentes:</h6>
+                <ul>
+                  <li>Sensores (visão, toque, som)</li>
+                  <li>Atuadores (motores, pistões)</li>
+                  <li>Sistemas de controle</li>
+                  <li>Algoritmos de navegação</li>
+                  <li>Interfaces de usuário</li>
+                  <li>Sistemas de segurança</li>
+                </ul>
+
+                <h6 class="fw-bold">Aplicações:</h6>
+                <ul>
+                  <li>Manufatura automatizada</li>
+                  <li>Exploração espacial</li>
+                  <li>Cirurgia robótica</li>
+                  <li>Logística e entrega</li>
+                  <li>Educação e pesquisa</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Raciocínio Automatizado -->
+    <div
+      class="modal fade"
+      id="modalRaciocinioAutomatizado"
+      tabindex="-1"
+      aria-labelledby="modalRaciocinioAutomatizadoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalRaciocinioAutomatizadoLabel">
+              <i class="fas fa-lightbulb text-danger me-2"></i>Raciocínio
+              Automatizado
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">Definição:</h6>
+                <p>
+                  Capacidade dos sistemas de IA de aplicar lógica e inferência
+                  para resolver problemas, tomar decisões e chegar a conclusões
+                  baseadas em dados e regras.
+                </p>
+
+                <h6 class="fw-bold">Tipos de raciocínio:</h6>
+                <ul>
+                  <li>Raciocínio dedutivo</li>
+                  <li>Raciocínio indutivo</li>
+                  <li>Raciocínio abductivo</li>
+                  <li>Raciocínio baseado em casos</li>
+                  <li>Raciocínio temporal</li>
+                  <li>Raciocínio espacial</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Técnicas:</h6>
+                <ul>
+                  <li>Sistemas baseados em regras</li>
+                  <li>Lógica fuzzy</li>
+                  <li>Redes bayesianas</li>
+                  <li>Árvores de decisão</li>
+                  <li>Algoritmos genéticos</li>
+                  <li>Programação lógica</li>
+                </ul>
+
+                <h6 class="fw-bold">Aplicações:</h6>
+                <ul>
+                  <li>Sistemas especialistas</li>
+                  <li>Diagnóstico médico</li>
+                  <li>Planejamento logístico</li>
+                  <li>Jogos de estratégia</li>
+                  <li>Análise de risco</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Integração de Áreas -->
+    <div
+      class="modal fade"
+      id="modalIntegracaoAreas"
+      tabindex="-1"
+      aria-labelledby="modalIntegracaoAreasLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalIntegracaoAreasLabel">
+              <i class="fas fa-puzzle-piece text-secondary me-2"></i>Integração
+              de Áreas
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">Conceito:</h6>
+                <p>
+                  A combinação de múltiplas áreas da IA para criar sistemas mais
+                  inteligentes e versáteis que podem resolver problemas
+                  complexos do mundo real.
+                </p>
+
+                <h6 class="fw-bold">Exemplos de integração:</h6>
+                <ul>
+                  <li>NLP + Visão Computacional</li>
+                  <li>Machine Learning + Robótica</li>
+                  <li>Raciocínio + Aprendizado</li>
+                  <li>Percepção + Ação</li>
+                  <li>Planejamento + Execução</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Benefícios:</h6>
+                <ul>
+                  <li>Maior robustez</li>
+                  <li>Capacidades expandidas</li>
+                  <li>Melhor adaptação</li>
+                  <li>Resolução de problemas complexos</li>
+                  <li>Experiência mais natural</li>
+                </ul>
+
+                <h6 class="fw-bold">Desafios:</h6>
+                <ul>
+                  <li>Complexidade de integração</li>
+                  <li>Coordenação entre módulos</li>
+                  <li>Gerenciamento de conflitos</li>
+                  <li>Otimização global</li>
+                  <li>Manutenção e atualização</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modais da Timeline -->
+
+    <!-- Modal Teste de Turing -->
+    <div
+      class="modal fade"
+      id="modalTesteTuring"
+      tabindex="-1"
+      aria-labelledby="modalTesteTuringLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTesteTuringLabel">
+              <i class="fas fa-history text-primary me-2"></i>Teste de Turing
+              (1950)
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">O que é:</h6>
+                <p>
+                  Teste proposto por Alan Turing para determinar se uma máquina
+                  pode exibir comportamento inteligente indistinguível do
+                  humano.
+                </p>
+
+                <h6 class="fw-bold">Como funciona:</h6>
+                <ul>
+                  <li>Um juiz humano conversa com dois entidades</li>
+                  <li>Uma é humana, outra é máquina</li>
+                  <li>O juiz não sabe qual é qual</li>
+                  <li>
+                    Se o juiz não conseguir distinguir, a máquina "passou" no
+                    teste
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Significado:</h6>
+                <ul>
+                  <li>Primeiro critério objetivo para inteligência</li>
+                  <li>Foco no comportamento, não na consciência</li>
+                  <li>Influenciou décadas de pesquisa em IA</li>
+                  <li>Ainda é referência na área</li>
+                </ul>
+
+                <h6 class="fw-bold">Críticas:</h6>
+                <ul>
+                  <li>Testa apenas comportamento conversacional</li>
+                  <li>Não mede compreensão real</li>
+                  <li>Pode ser "enganado" por truques</li>
+                  <li>Foco muito limitado</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Conferência Dartmouth -->
+    <div
+      class="modal fade"
+      id="modalDartmouth"
+      tabindex="-1"
+      aria-labelledby="modalDartmouthLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalDartmouthLabel">
+              <i class="fas fa-history text-success me-2"></i>Conferência de
+              Dartmouth (1956)
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">O que foi:</h6>
+                <p>
+                  Conferência de verão que oficialmente deu origem ao campo da
+                  Inteligência Artificial, onde o termo "IA" foi cunhado.
+                </p>
+
+                <h6 class="fw-bold">Participantes importantes:</h6>
+                <ul>
+                  <li>John McCarthy (organizador)</li>
+                  <li>Marvin Minsky</li>
+                  <li>Claude Shannon</li>
+                  <li>Herbert Simon</li>
+                  <li>Allen Newell</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Objetivos estabelecidos:</h6>
+                <ul>
+                  <li>Simular aspectos da inteligência humana</li>
+                  <li>Criar máquinas que pensam</li>
+                  <li>Desenvolver linguagens de programação para IA</li>
+                  <li>Resolver problemas complexos</li>
+                  <li>Estabelecer uma nova disciplina científica</li>
+                </ul>
+
+                <h6 class="fw-bold">Legado:</h6>
+                <p>
+                  Marcou o início formal da IA como campo de pesquisa,
+                  estabelecendo as bases para décadas de desenvolvimento
+                  tecnológico.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Deep Blue -->
+    <div
+      class="modal fade"
+      id="modalDeepBlue"
+      tabindex="-1"
+      aria-labelledby="modalDeepBlueLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalDeepBlueLabel">
+              <i class="fas fa-history text-info me-2"></i>Deep Blue vence
+              Kasparov (1997)
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">O que aconteceu:</h6>
+                <p>
+                  O supercomputador da IBM venceu o campeão mundial de xadrez
+                  Garry Kasparov em uma série de 6 partidas, marcando um marco
+                  histórico.
+                </p>
+
+                <h6 class="fw-bold">Resultado:</h6>
+                <ul>
+                  <li>Deep Blue: 3,5 pontos</li>
+                  <li>Kasparov: 2,5 pontos</li>
+                  <li>
+                    Primeira vez que uma máquina venceu um campeão mundial
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Tecnologia:</h6>
+                <ul>
+                  <li>480 processadores especializados</li>
+                  <li>
+                    Capacidade de avaliar 200 milhões de posições por segundo
+                  </li>
+                  <li>Base de dados de aberturas</li>
+                  <li>Algoritmos de busca profunda</li>
+                </ul>
+
+                <h6 class="fw-bold">Significado:</h6>
+                <ul>
+                  <li>
+                    Demonstrou que máquinas podem superar humanos em tarefas
+                    intelectuais
+                  </li>
+                  <li>Marco na história da IA</li>
+                  <li>Influenciou o desenvolvimento de IA para jogos</li>
+                  <li>Mostrou o potencial da computação paralela</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Redes Neurais Profundas -->
+    <div
+      class="modal fade"
+      id="modalRedesNeurais"
+      tabindex="-1"
+      aria-labelledby="modalRedesNeuraisLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalRedesNeuraisLabel">
+              <i class="fas fa-history text-warning me-2"></i>Avanço com Redes
+              Neurais Profundas (2012)
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">O que aconteceu:</h6>
+                <p>
+                  O desenvolvimento de redes neurais convolucionais profundas
+                  revolucionou o reconhecimento de imagens, marcando o início da
+                  era moderna do Deep Learning.
+                </p>
+
+                <h6 class="fw-bold">AlexNet:</h6>
+                <ul>
+                  <li>Venceu a competição ImageNet</li>
+                  <li>Reduziu erro de classificação de 26% para 15%</li>
+                  <li>Usou GPU para treinamento</li>
+                  <li>Arquitetura de 8 camadas</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Impacto:</h6>
+                <ul>
+                  <li>Renascimento do interesse em redes neurais</li>
+                  <li>Início da era do Deep Learning</li>
+                  <li>Melhoria significativa em reconhecimento de imagem</li>
+                  <li>Influenciou outras áreas da IA</li>
+                </ul>
+
+                <h6 class="fw-bold">Tecnologias:</h6>
+                <ul>
+                  <li>Redes Neurais Convolucionais (CNN)</li>
+                  <li>GPUs para treinamento</li>
+                  <li>Big Data</li>
+                  <li>Dropout para regularização</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal IA Generativa -->
+    <div
+      class="modal fade"
+      id="modalIAGenerativa"
+      tabindex="-1"
+      aria-labelledby="modalIAGenerativaLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalIAGenerativaLabel">
+              <i class="fas fa-history text-danger me-2"></i>IA Generativa
+              (2023+)
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">O que é:</h6>
+                <p>
+                  IA que pode gerar conteúdo novo e original, como texto,
+                  imagens, música e vídeo, baseada em padrões aprendidos de
+                  dados existentes.
+                </p>
+
+                <h6 class="fw-bold">Modelos principais:</h6>
+                <ul>
+                  <li>GPT (Generative Pre-trained Transformer)</li>
+                  <li>DALL-E (imagens)</li>
+                  <li>Midjourney</li>
+                  <li>Stable Diffusion</li>
+                  <li>Claude</li>
+                  <li>Bard</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Aplicações:</h6>
+                <ul>
+                  <li>Geração de texto criativo</li>
+                  <li>Criação de imagens artísticas</li>
+                  <li>Assistência em programação</li>
+                  <li>Tradução e resumo</li>
+                  <li>Design e arquitetura</li>
+                </ul>
+
+                <h6 class="fw-bold">Impacto:</h6>
+                <ul>
+                  <li>Democratização da criação de conteúdo</li>
+                  <li>Transformação de indústrias criativas</li>
+                  <li>Novas formas de interação humano-computador</li>
+                  <li>Desafios éticos e regulatórios</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Próximos Capítulos -->
+    <div
+      class="modal fade"
+      id="modalProximosCapitulos"
+      tabindex="-1"
+      aria-labelledby="modalProximosCapitulosLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalProximosCapitulosLabel">
+              <i class="fas fa-history text-secondary me-2"></i>Próximos
+              Capítulos (Futuro)
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="fw-bold">Tendências futuras:</h6>
+                <ul>
+                  <li>IA Geral (AGI)</li>
+                  <li>Computação quântica</li>
+                  <li>IA explicável</li>
+                  <li>IA ética e responsável</li>
+                  <li>Convergência de tecnologias</li>
+                </ul>
+
+                <h6 class="fw-bold">Desafios:</h6>
+                <ul>
+                  <li>Regulação e governança</li>
+                  <li>Impacto no emprego</li>
+                  <li>Privacidade e segurança</li>
+                  <li>Viés e discriminação</li>
+                  <li>Sustentabilidade</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="fw-bold">Oportunidades:</h6>
+                <ul>
+                  <li>Resolução de problemas globais</li>
+                  <li>Melhoria da qualidade de vida</li>
+                  <li>Novas formas de trabalho</li>
+                  <li>Educação personalizada</li>
+                  <li>Descobertas científicas</li>
+                </ul>
+
+                <h6 class="fw-bold">Preparação:</h6>
+                <p>
+                  É essencial que a sociedade se prepare para essas mudanças
+                  através de educação, regulamentação adequada e desenvolvimento
+                  de habilidades complementares à IA.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

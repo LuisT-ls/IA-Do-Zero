@@ -65,10 +65,34 @@ class FundamentosModule {
    * Configura os event listeners
    */
   setupEventListeners() {
+    // Mapeamento de cards para modais
+    this.cardModalMap = {
+      'Assistente Virtual': 'modalAssistenteVirtual',
+      'Carros Autônomos': 'modalCarrosAutonomos',
+      'IA Fraca': 'modalIAFraca',
+      'IA Forte': 'modalIAForte',
+      'IA Geral': 'modalIAGeral',
+      'Machine Learning': 'modalMachineLearning',
+      'Processamento de Linguagem Natural (NLP)': 'modalNLP',
+      'Visão Computacional': 'modalVisaoComputacional',
+      Robótica: 'modalRobotica',
+      'Raciocínio Automatizado': 'modalRaciocinioAutomatizado',
+      'Integração de Áreas': 'modalIntegracaoAreas',
+      'Teste de Turing': 'modalTesteTuring',
+      'Conferência de Dartmouth': 'modalDartmouth',
+      'Deep Blue vence Kasparov': 'modalDeepBlue',
+      'Avanço com Redes Neurais Profundas': 'modalRedesNeurais',
+      'IA Generativa': 'modalIAGenerativa',
+      'Próximos Capítulos': 'modalProximosCapitulos'
+    }
+
     // Event listener para cards interativos
     document
       .querySelectorAll(FUNDAMENTOS_CONFIG.selectors.cards)
       .forEach(card => {
+        // Adiciona cursor pointer para indicar que é clicável
+        card.style.cursor = 'pointer'
+
         card.addEventListener('click', this.handleCardClick.bind(this))
         card.addEventListener('mouseenter', this.handleCardHover.bind(this))
         card.addEventListener('mouseleave', this.handleCardLeave.bind(this))
@@ -172,9 +196,28 @@ class FundamentosModule {
     const card = event.currentTarget
     const title = card.querySelector('.card-title')?.textContent
 
-    if (title) {
-      this.showCardDetails(title, card)
+    if (title && this.cardModalMap) {
+      this.openCardModal(title, card)
       this.highlightCard(card)
+    }
+  }
+
+  /**
+   * Abre o modal correspondente ao card clicado
+   */
+  openCardModal(title, card) {
+    const modalId = this.cardModalMap[title]
+
+    if (modalId) {
+      const modal = document.getElementById(modalId)
+      if (modal && typeof bootstrap !== 'undefined') {
+        const bootstrapModal = new bootstrap.Modal(modal)
+        bootstrapModal.show()
+      } else {
+        console.warn(`Modal não encontrado: ${modalId}`)
+      }
+    } else {
+      console.warn(`Modal não mapeado para: ${title}`)
     }
   }
 
@@ -185,6 +228,11 @@ class FundamentosModule {
     const card = event.currentTarget
     card.classList.add('card-hover')
     this.addHoverEffect(card)
+
+    // Adiciona efeito de escala e sombra
+    card.style.transform = 'scale(1.02)'
+    card.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)'
+    card.style.transition = 'all 0.2s ease'
   }
 
   /**
@@ -194,6 +242,10 @@ class FundamentosModule {
     const card = event.currentTarget
     card.classList.remove('card-hover')
     this.removeHoverEffect(card)
+
+    // Remove efeitos de escala e sombra
+    card.style.transform = 'scale(1)'
+    card.style.boxShadow = ''
   }
 
   /**
