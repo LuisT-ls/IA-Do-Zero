@@ -1,0 +1,361 @@
+/* ===== ESTILOS PARA PÁGINAS DE POLÍTICA ===== */
+
+/* Estilos gerais da página */
+.policy-content {
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Cabeçalho da página */
+.page-header {
+  padding: 2rem 0;
+  border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.page-header .lead {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* Seções da política */
+.policy-section {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.policy-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section-title {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.section-content {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.section-content p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Tipos de cookies */
+.cookie-type {
+  background: var(--bg-primary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.cookie-type h3 {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.cookie-type ul {
+  margin-top: 1rem;
+}
+
+.cookie-type li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Serviços de terceiros */
+.third-party-service {
+  background: var(--bg-primary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 3px solid var(--info-color);
+  margin-bottom: 1.5rem;
+}
+
+.third-party-service h4 {
+  color: var(--info-color);
+  margin-bottom: 1rem;
+}
+
+/* Opções de gerenciamento */
+.management-option {
+  background: var(--bg-primary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.management-option h3 {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Informações de retenção */
+.retention-info .card {
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.retention-info .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.retention-info .card-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Informações de contato */
+.contact-info {
+  background: var(--bg-primary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.contact-item i {
+  width: 20px;
+  text-align: center;
+  margin-right: 0.75rem;
+}
+
+.contact-item a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Botões de navegação */
+.navigation-buttons {
+  padding: 2rem 0;
+  border-top: 2px solid var(--border-color);
+}
+
+.navigation-buttons .btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navigation-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Alertas personalizados */
+.alert {
+  border-radius: 8px;
+  border: none;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.alert-info {
+  background: linear-gradient(135deg, var(--info-bg), var(--info-bg-light));
+  color: var(--info-text);
+  border-left: 4px solid var(--info-color);
+}
+
+.alert-warning {
+  background: linear-gradient(
+    135deg,
+    var(--warning-bg),
+    var(--warning-bg-light)
+  );
+  color: var(--warning-text);
+  border-left: 4px solid var(--warning-color);
+}
+
+/* Breadcrumb personalizado */
+.breadcrumb {
+  background: transparent;
+  padding: 0.5rem 0;
+  margin-bottom: 2rem;
+}
+
+.breadcrumb-item a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+  color: var(--primary-hover);
+}
+
+.breadcrumb-item.active {
+  color: var(--text-muted);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .policy-section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .navigation-buttons .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .contact-info .row {
+    flex-direction: column;
+  }
+
+  .contact-info .col-md-6:last-child {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .policy-section {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .cookie-type,
+  .third-party-service,
+  .management-option {
+    padding: 1rem;
+  }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.policy-section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.policy-section:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.policy-section:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.policy-section:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.policy-section:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.policy-section:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.policy-section:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.policy-section:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.policy-section:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+/* Melhorias de acessibilidade */
+.section-title:focus,
+.cookie-type h3:focus,
+.management-option h3:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Estilos para modo escuro */
+[data-theme='dark'] .policy-section {
+  background: var(--bg-secondary-dark);
+  border-color: var(--border-color-dark);
+}
+
+[data-theme='dark'] .cookie-type,
+[data-theme='dark'] .third-party-service,
+[data-theme='dark'] .management-option,
+[data-theme='dark'] .contact-info {
+  background: var(--bg-primary-dark);
+  border-color: var(--border-color-dark);
+}
+
+[data-theme='dark'] .retention-info .card {
+  background: var(--bg-primary-dark);
+  border-color: var(--border-color-dark);
+}
+
+/* Variáveis CSS para temas */
+:root {
+  --info-bg: #d1ecf1;
+  --info-bg-light: #e7f3f5;
+  --info-text: #0c5460;
+  --warning-bg: #fff3cd;
+  --warning-bg-light: #fef9e7;
+  --warning-text: #856404;
+}
+
+[data-theme='dark'] {
+  --info-bg: #1a3a3f;
+  --info-bg-light: #2a4a4f;
+  --info-text: #b8e6f0;
+  --warning-bg: #3a2f1a;
+  --warning-bg-light: #4a3f2a;
+  --warning-text: #f0d8b8;
+}
