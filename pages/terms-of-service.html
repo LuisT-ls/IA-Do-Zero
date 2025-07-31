@@ -83,6 +83,41 @@
     <!-- CSS principal da aplicação -->
     <link rel="stylesheet" href="../assets/css/main.css" />
 
+    <!-- Estilos personalizados para navegação minimalista elegante -->
+    <style>
+      .navbar-nav .nav-link {
+        position: relative;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+        font-size: 0.9rem;
+      }
+
+      .navbar-nav .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.12) !important;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      }
+
+      .navbar-nav .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.18) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+      }
+
+      .navbar-nav .nav-link.active:hover {
+        background-color: rgba(255, 255, 255, 0.22) !important;
+      }
+
+      .navbar {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        padding: 0.5rem 0;
+      }
+
+      .transition-all {
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      }
+    </style>
+
     <!-- Manifest para PWA -->
     <link rel="manifest" href="../manifest.json" />
 
@@ -120,22 +155,44 @@
     </header>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-gradient border-0 shadow-sm"
+      style="background: linear-gradient(135deg, #6c757d 0%, #495057 100%)"
+    >
       <div class="container">
         <div class="navbar-nav mx-auto">
-          <a class="nav-link" href="../index.html">
+          <a
+            class="nav-link px-3 py-2 mx-1 rounded-pill transition-all"
+            href="../index.html"
+            style="transition: all 0.25s ease"
+          >
             <i class="fas fa-home me-1"></i>
             Início
           </a>
-          <a class="nav-link active" href="terms-of-service.html">
+          <a
+            class="nav-link active px-3 py-2 mx-1 rounded-pill transition-all"
+            href="terms-of-service.html"
+            style="
+              transition: all 0.25s ease;
+              background-color: rgba(255, 255, 255, 0.18);
+            "
+          >
             <i class="fas fa-file-contract me-1"></i>
             Termos de Uso
           </a>
-          <a class="nav-link" href="privacy.html">
+          <a
+            class="nav-link px-3 py-2 mx-1 rounded-pill transition-all"
+            href="privacy.html"
+            style="transition: all 0.25s ease"
+          >
             <i class="fas fa-shield-alt me-1"></i>
             Privacidade
           </a>
-          <a class="nav-link" href="cookies.html">
+          <a
+            class="nav-link px-3 py-2 mx-1 rounded-pill transition-all"
+            href="cookies.html"
+            style="transition: all 0.25s ease"
+          >
             <i class="fas fa-cookie-bite me-1"></i>
             Cookies
           </a>
@@ -419,9 +476,12 @@
                   <div class="card h-100 border-primary">
                     <div class="card-body text-center">
                       <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
-                      <h5 class="card-title">Email</h5>
+                      <h5 class="card-title text-white">E-mail</h5>
                       <p class="card-text">
-                        <a href="mailto:contato@iadozero.com">
+                        <a
+                          href="mailto:contato@iadozero.com"
+                          class="text-white"
+                        >
                           contato@iadozero.com
                         </a>
                       </p>
@@ -432,9 +492,11 @@
                   <div class="card h-100 border-primary">
                     <div class="card-body text-center">
                       <i class="fas fa-globe fa-2x text-primary mb-3"></i>
-                      <h5 class="card-title">Website</h5>
+                      <h5 class="card-title text-white">Website</h5>
                       <p class="card-text">
-                        <a href="https://iadozero.com"> iadozero.com </a>
+                        <a href="https://iadozero.com" class="text-white">
+                          iadozero.com
+                        </a>
                       </p>
                     </div>
                   </div>
@@ -479,7 +541,7 @@
           <div class="col-md-6 text-md-end">
             <p class="mb-1">
               <small
-                >&copy; 2024 IA Do Zero. Todos os direitos reservados.</small
+                >&copy; 2025 IA Do Zero. Todos os direitos reservados.</small
               >
             </p>
             <div class="footer-links">
@@ -507,6 +569,9 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <!-- JavaScript principal da aplicação -->
+    <script src="../js/app.js"></script>
 
     <!-- Service Worker Registration -->
     <script>
