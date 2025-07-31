@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Meta tags essenciais -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Meta tags de SEO -->
+    <title>Fundamentos da Inteligência Artificial – IA Do Zero</title>
+    <meta
+      name="description"
+      content="Aprenda os fundamentos da Inteligência Artificial: conceitos básicos, história, aplicações e princípios essenciais da IA moderna."
+    />
+    <meta
+      name="keywords"
+      content="fundamentos IA, inteligência artificial, conceitos básicos IA, história IA, aplicações IA, princípios IA, IA para iniciantes"
+    />
+    <meta name="author" content="Luis Antonio Souza Teixeira" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Meta tags Open Graph para redes sociais -->
+    <meta
+      property="og:title"
+      content="Fundamentos da Inteligência Artificial – IA Do Zero"
+    />
+    <meta
+      property="og:description"
+      content="Aprenda os fundamentos da Inteligência Artificial: conceitos básicos, história, aplicações e princípios essenciais da IA moderna."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="../../imagem-preview.png" />
+    <meta
+      property="og:url"
+      content="https://iadozero.com/pages/topics/fundamentos.html"
+    />
+    <meta property="og:site_name" content="IA Do Zero" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Fundamentos da Inteligência Artificial – IA Do Zero"
+    />
+    <meta
+      name="twitter:description"
+      content="Aprenda os fundamentos da Inteligência Artificial: conceitos básicos, história e aplicações."
+    />
+    <meta name="twitter:image" content="../../imagem-preview.png" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/img/favicon/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../assets/img/favicon/favicon-16x16.png"
+    />
+
+    <!-- Bootstrap CSS via CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- FontAwesome via CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS principal da aplicação -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Manifest para PWA -->
+    <link rel="manifest" href="../../manifest.json" />
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fundamentos da Inteligência Artificial",
+        "description": "Aprenda os fundamentos da Inteligência Artificial: conceitos básicos, história, aplicações e princípios essenciais da IA moderna.",
+        "author": {
+          "@type": "Person",
+          "name": "Luis Antonio Souza Teixeira"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "IA Do Zero"
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-01",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://iadozero.com/pages/topics/fundamentos.html"
+        }
+      }
+    </script>
+  </head>
+
+  <body data-theme="light">
+    <!-- Skip link para acessibilidade -->
+    <a href="#main-content" class="visually-hidden-focusable"
+      >Pular para o conteúdo principal</a
+    >
+
+    <!-- Cabeçalho -->
+    <header class="bg-dark text-white py-5" role="banner">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8 col-md-10 col-sm-12">
+            <h1 class="display-4 fw-bold mb-3">
+              <i class="fas fa-brain me-3" aria-hidden="true"></i>
+              IA Do Zero
+            </h1>
+            <p class="lead mb-0">
+              Aprenda Inteligência Artificial de forma didática e acessível. Do
+              básico ao avançado, com explicações claras e exemplos práticos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Botão de alternância de tema -->
+        <div class="row justify-content-center mt-4">
+          <div class="col-auto">
+            <button
+              id="theme-toggle"
+              class="btn btn-outline-light btn-sm theme-toggle-btn"
+              aria-label="Alternar entre modo claro e escuro"
+              title="Alternar tema"
+            >
+              <div class="theme-icon-container">
+                <i class="fas fa-sun theme-icon-light" aria-hidden="true"></i>
+                <i class="fas fa-moon theme-icon-dark" aria-hidden="true"></i>
+              </div>
+              <span class="theme-text">Modo Escuro</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main id="main-content" class="container py-5" role="main">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a
+              href="../../index.html"
+              class="text-decoration-none"
+              aria-label="Voltar para a página inicial"
+            >
+              <i class="fas fa-home me-1" aria-hidden="true"></i>
+              Início
+            </a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Fundamentos da IA
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Título da página -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10 col-md-11 col-sm-12">
+          <div class="text-center">
+            <span class="badge bg-primary rounded-pill mb-3 fs-6"
+              >Tópico 01</span
+            >
+            <h1 class="display-5 fw-bold mb-4">
+              <i class="fas fa-rocket me-3" aria-hidden="true"></i>
+              Fundamentos da Inteligência Artificial
+            </h1>
+            <p class="lead text-muted">
+              Descubra os conceitos básicos, história e aplicações fundamentais
+              da Inteligência Artificial. Este é o ponto de partida essencial
+              para sua jornada em IA.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seção de introdução -->
+      <section class="mb-5 text-center" aria-labelledby="intro-heading">
+        <h2 id="intro-heading">1. Fundamentos da Inteligência Artificial</h2>
+        <p class="lead text-muted">
+          Esta seção apresenta os princípios, histórico e áreas fundamentais da
+          Inteligência Artificial, fornecendo uma base sólida para iniciantes
+          que desejam compreender os conceitos essenciais da IA moderna.
+        </p>
+      </section>
+
+      <!-- Seção explicativa -->
+      <section class="mb-5" aria-labelledby="what-is-ai-heading">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-11 col-sm-12">
+            <h3 id="what-is-ai-heading" class="mb-4">
+              <i
+                class="fas fa-question-circle me-2 text-primary"
+                aria-hidden="true"
+              ></i>
+              O que é Inteligência Artificial?
+            </h3>
+            <p class="lead mb-4">
+              A Inteligência Artificial (IA) é um ramo da ciência da computação
+              focado em desenvolver sistemas capazes de simular comportamento
+              inteligente humano. Esses sistemas podem aprender, raciocinar,
+              perceber e tomar decisões de forma autônoma, revolucionando
+              diversos setores da sociedade moderna.
+            </p>
+
+            <div class="row g-4 mt-4" role="list">
+              <div class="col-md-6 col-sm-12" role="listitem">
+                <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                  <div class="card-body text-center">
+                    <i
+                      class="fas fa-robot text-primary mb-3"
+                      style="font-size: 2.5rem"
+                      aria-hidden="true"
+                    ></i>
+                    <h4 class="card-title h5">Assistente Virtual</h4>
+                    <p class="card-text">
+                      Sistemas como Siri, Alexa e Google Assistant que
+                      compreendem comandos de voz, respondem perguntas e
+                      executam tarefas através de processamento de linguagem
+                      natural.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 col-sm-12" role="listitem">
+                <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                  <div class="card-body text-center">
+                    <i
+                      class="fas fa-car text-success mb-3"
+                      style="font-size: 2.5rem"
+                      aria-hidden="true"
+                    ></i>
+                    <h4 class="card-title h5">Carros Autônomos</h4>
+                    <p class="card-text">
+                      Veículos que utilizam sensores, câmeras e algoritmos de IA
+                      para navegar autonomamente pelas ruas, detectar obstáculos
+                      e tomar decisões de direção em tempo real.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção sobre tipos de IA -->
+      <section class="mb-5" aria-labelledby="ai-types-heading">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-11 col-sm-12">
+            <h3 id="ai-types-heading" class="mb-4">
+              <i
+                class="fas fa-layer-group me-2 text-info"
+                aria-hidden="true"
+              ></i>
+              Tipos de Inteligência Artificial
+            </h3>
+            <p class="lead mb-4">
+              A Inteligência Artificial pode ser classificada em diferentes
+              categorias baseadas em suas capacidades e escopo de aplicação.
+            </p>
+
+            <div class="row g-4" role="list">
+              <div class="col-md-4 col-sm-6 col-12" role="listitem">
+                <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                  <div class="card-body text-center">
+                    <i
+                      class="fas fa-cogs text-warning mb-3"
+                      style="font-size: 2.5rem"
+                      aria-hidden="true"
+                    ></i>
+                    <h4 class="card-title h5">IA Fraca</h4>
+                    <p class="card-text">
+                      Sistemas especializados em tarefas específicas, como
+                      reconhecimento de voz, classificação de imagens ou jogos
+                      de xadrez. São os tipos mais comuns atualmente.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-4 col-sm-6 col-12" role="listitem">
+                <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                  <div class="card-body text-center">
+                    <i
+                      class="fas fa-brain text-danger mb-3"
+                      style="font-size: 2.5rem"
+                      aria-hidden="true"
+                    ></i>
+                    <h4 class="card-title h5">IA Forte</h4>
+                    <p class="card-text">
+                      Sistemas com capacidade semelhante à inteligência humana,
+                      capazes de compreensão, consciência e raciocínio geral.
+                      Ainda é teórica e não foi alcançada.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-4 col-sm-6 col-12" role="listitem">
+                <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                  <div class="card-body text-center">
+                    <i
+                      class="fas fa-star text-success mb-3"
+                      style="font-size: 2.5rem"
+                      aria-hidden="true"
+                    ></i>
+                    <h4 class="card-title h5">IA Geral</h4>
+                    <p class="card-text">
+                      Sistema que pode aprender e executar qualquer tarefa
+                      cognitiva que um ser humano pode realizar. Representa o
+                      ideal futuro da Inteligência Artificial.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção sobre áreas da IA -->
+      <section class="mb-5" aria-labelledby="ai-areas-heading">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-11 col-sm-12">
+            <h3 id="ai-areas-heading" class="mb-4">
+              <i
+                class="fas fa-sitemap me-2 text-secondary"
+                aria-hidden="true"
+              ></i>
+              Áreas da Inteligência Artificial
+            </h3>
+            <p class="lead mb-4">
+              A Inteligência Artificial é composta por diversas áreas
+              especializadas, cada uma focada em aspectos específicos da
+              cognição e comportamento inteligente. Essas áreas frequentemente
+              se sobrepõem e trabalham de forma integrada para criar sistemas
+              mais robustos e capazes.
+            </p>
+
+            <div class="row g-4" role="list">
+              <div class="col-md-6 col-lg-4 col-sm-12" role="listitem">
+                <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                  <div class="card-body text-center">
+                    <i
+                      class="fas fa-chart-line text-primary mb-3"
+                      style="font-size: 2.5rem"
+                      aria-hidden="true"
+                    ></i>
+                    <h4 class="card-title h5">Machine Learning</h4>
+                    <p class="card-text">
+                      Algoritmos que permitem aos computadores aprender e
+                      melhorar automaticamente através da experiência, sem serem
+                      explicitamente programados para cada tarefa.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 col-lg-4 col-sm-12" role="listitem">
+                <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                  <div class="card-body text-center">
+                    <i
+                      class="fas fa-comments text-success mb-3"
+                      style="font-size: 2.5rem"
+                      aria-hidden="true"
+                    ></i>
+                    <h4 class="card-title h5">
+                      Processamento de Linguagem Natural (NLP)
+                    </h4>
+                    <p class="card-text">
+                      Capacidade dos computadores de entender, interpretar e
+                      gerar linguagem humana, permitindo comunicação natural
+                      entre humanos e máquinas.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 col-lg-4 col-sm-12" role="listitem">
+                <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                  <div class="card-body text-center">
+                    <i
+                      class="fas fa-eye text-info mb-3"
+                      style="font-size: 2.5rem"
+                      aria-hidden="true"
+                    ></i>
+                    <h4 class="card-title h5">Visão Computacional</h4>
+                    <p class="card-text">
+                      Capacidade dos computadores de extrair informações
+                      significativas de imagens e vídeos, interpretando o mundo
+                      visual como os humanos fazem.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 col-lg-4 col-sm-12" role="listitem">
+                <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                  <div class="card-body text-center">
+                    <i
+                      class="fas fa-robot text-warning mb-3"
+                      style="font-size: 2.5rem"
+                      aria-hidden="true"
+                    ></i>
+                    <h4 class="card-title h5">Robótica</h4>
+                    <p class="card-text">
+                      Desenvolvimento de sistemas físicos autônomos que podem
+                      interagir com o ambiente, combinando IA com mecânica e
+                      eletrônica.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 col-lg-4 col-sm-12" role="listitem">
+                <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                  <div class="card-body text-center">
+                    <i
+                      class="fas fa-lightbulb text-danger mb-3"
+                      style="font-size: 2.5rem"
+                      aria-hidden="true"
+                    ></i>
+                    <h4 class="card-title h5">Raciocínio Automatizado</h4>
+                    <p class="card-text">
+                      Capacidade dos sistemas de IA de aplicar lógica e
+                      inferência para resolver problemas, tomar decisões e
+                      chegar a conclusões baseadas em dados e regras.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 col-lg-4 col-sm-12" role="listitem">
+                <article
+                  class="card h-100 border-0 shadow-sm bg-light"
+                  tabindex="0"
+                >
+                  <div class="card-body text-center">
+                    <i
+                      class="fas fa-puzzle-piece text-secondary mb-3"
+                      style="font-size: 2.5rem"
+                      aria-hidden="true"
+                    ></i>
+                    <h4 class="card-title h5">Integração de Áreas</h4>
+                    <p class="card-text">
+                      Muitos sistemas modernos de IA combinam múltiplas áreas,
+                      criando soluções mais inteligentes e versáteis para
+                      problemas complexos do mundo real.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção sobre história e evolução da IA -->
+      <section class="mb-5" aria-labelledby="ai-history-heading">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-11 col-sm-12">
+            <h3 id="ai-history-heading" class="mb-4">
+              <i
+                class="fas fa-history me-2 text-warning"
+                aria-hidden="true"
+              ></i>
+              História e Evolução da IA
+            </h3>
+            <p class="lead mb-4">
+              A Inteligência Artificial tem uma rica história que se estende por
+              décadas, marcada por avanços revolucionários e momentos que
+              redefiniram nossa compreensão sobre o que é possível com a
+              tecnologia.
+            </p>
+
+            <div
+              class="timeline-container"
+              role="list"
+              aria-label="Linha do tempo da evolução da Inteligência Artificial"
+            >
+              <div class="row g-4">
+                <div class="col-md-6 col-lg-4 col-sm-12" role="listitem">
+                  <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                    <div class="card-body text-center">
+                      <div
+                        class="timeline-year bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
+                        style="
+                          width: 80px;
+                          height: 80px;
+                          font-weight: bold;
+                          font-size: 1.2rem;
+                        "
+                        aria-label="Ano 1950"
+                      >
+                        1950
+                      </div>
+                      <h4 class="card-title h5">Teste de Turing</h4>
+                      <p class="card-text">
+                        Alan Turing propõe o famoso teste para determinar se uma
+                        máquina pode exibir comportamento inteligente
+                        indistinguível do humano, estabelecendo um marco
+                        fundamental na história da IA.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-sm-12" role="listitem">
+                  <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                    <div class="card-body text-center">
+                      <div
+                        class="timeline-year bg-success text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
+                        style="
+                          width: 80px;
+                          height: 80px;
+                          font-weight: bold;
+                          font-size: 1.2rem;
+                        "
+                        aria-label="Ano 1956"
+                      >
+                        1956
+                      </div>
+                      <h4 class="card-title h5">Conferência de Dartmouth</h4>
+                      <p class="card-text">
+                        A conferência que oficialmente deu origem ao campo da
+                        Inteligência Artificial, onde o termo "IA" foi cunhado e
+                        os primeiros objetivos da área foram estabelecidos.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-sm-12" role="listitem">
+                  <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                    <div class="card-body text-center">
+                      <div
+                        class="timeline-year bg-info text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
+                        style="
+                          width: 80px;
+                          height: 80px;
+                          font-weight: bold;
+                          font-size: 1.2rem;
+                        "
+                        aria-label="Ano 1997"
+                      >
+                        1997
+                      </div>
+                      <h4 class="card-title h5">Deep Blue vence Kasparov</h4>
+                      <p class="card-text">
+                        O supercomputador da IBM vence o campeão mundial de
+                        xadrez Garry Kasparov, demonstrando pela primeira vez
+                        que uma máquina poderia superar humanos em tarefas
+                        intelectuais complexas.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-sm-12" role="listitem">
+                  <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                    <div class="card-body text-center">
+                      <div
+                        class="timeline-year bg-warning text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
+                        style="
+                          width: 80px;
+                          height: 80px;
+                          font-weight: bold;
+                          font-size: 1.2rem;
+                        "
+                        aria-label="Ano 2012"
+                      >
+                        2012
+                      </div>
+                      <h4 class="card-title h5">
+                        Avanço com Redes Neurais Profundas
+                      </h4>
+                      <p class="card-text">
+                        O desenvolvimento de redes neurais convolucionais
+                        profundas revoluciona o reconhecimento de imagens,
+                        marcando o início da era moderna do Deep Learning.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-sm-12" role="listitem">
+                  <article class="card h-100 border-0 shadow-sm" tabindex="0">
+                    <div class="card-body text-center">
+                      <div
+                        class="timeline-year bg-danger text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
+                        style="
+                          width: 80px;
+                          height: 80px;
+                          font-weight: bold;
+                          font-size: 1.2rem;
+                        "
+                        aria-label="Ano 2023 e além"
+                      >
+                        2023+
+                      </div>
+                      <h4 class="card-title h5">IA Generativa</h4>
+                      <p class="card-text">
+                        Surgimento de modelos como GPT e DALL·E que revolucionam
+                        a geração de texto e imagens, democratizando o acesso à
+                        IA criativa e transformando diversos setores.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-sm-12" role="listitem">
+                  <article
+                    class="card h-100 border-0 shadow-sm bg-light"
+                    tabindex="0"
+                  >
+                    <div class="card-body text-center">
+                      <div
+                        class="timeline-year bg-secondary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
+                        style="
+                          width: 80px;
+                          height: 80px;
+                          font-weight: bold;
+                          font-size: 1.2rem;
+                        "
+                        aria-label="Futuro"
+                      >
+                        Futuro
+                      </div>
+                      <h4 class="card-title h5">Próximos Capítulos</h4>
+                      <p class="card-text">
+                        A evolução da IA continua acelerando, com pesquisas em
+                        IA geral, computação quântica e integração mais profunda
+                        com a sociedade, prometendo transformações ainda mais
+                        impactantes.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conteúdo do tópico será adicionado aqui -->
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div
+            class="alert alert-info"
+            role="alert"
+            aria-labelledby="development-alert"
+          >
+            <i class="fas fa-info-circle me-2" aria-hidden="true"></i>
+            <strong id="development-alert">Em desenvolvimento:</strong> O
+            conteúdo completo deste tópico está sendo preparado com muito
+            cuidado para garantir a melhor experiência de aprendizado.
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white py-5 mt-5" role="contentinfo">
+      <div class="container">
+        <!-- Seção principal do footer -->
+        <div class="row g-4 mb-4">
+          <!-- Sobre o projeto -->
+          <div class="col-lg-4 col-md-6">
+            <h5 class="mb-3">
+              <i class="fas fa-brain me-2" aria-hidden="true"></i>
+              IA Do Zero
+            </h5>
+            <p class="text-white-50 mb-3">
+              Plataforma educativa dedicada ao ensino de Inteligência Artificial
+              de forma didática e acessível para todos os níveis de
+              conhecimento.
+            </p>
+            <div class="d-flex gap-3">
+              <a
+                href="https://x.com/LusTeixeir41821"
+                class="text-white-50 fs-5"
+                aria-label="Seguir no Twitter"
+                title="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/luis-tei/"
+                class="text-white-50 fs-5"
+                aria-label="Seguir no LinkedIn"
+                title="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://github.com/LuisT-ls"
+                class="text-white-50 fs-5"
+                aria-label="Seguir no GitHub"
+                title="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Links úteis -->
+          <div class="col-lg-2 col-md-6">
+            <h6 class="mb-3">
+              <i class="fas fa-link me-2" aria-hidden="true"></i>
+              Links Úteis
+            </h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="text-white-50 text-decoration-none"
+                  aria-label="Sobre nós"
+                >
+                  <i
+                    class="fas fa-chevron-right me-2 small"
+                    aria-hidden="true"
+                  ></i>
+                  Sobre Nós
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="text-white-50 text-decoration-none"
+                  aria-label="FAQ - Perguntas Frequentes"
+                >
+                  <i
+                    class="fas fa-chevron-right me-2 small"
+                    aria-hidden="true"
+                  ></i>
+                  FAQ
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="text-white-50 text-decoration-none"
+                  aria-label="Blog"
+                >
+                  <i
+                    class="fas fa-chevron-right me-2 small"
+                    aria-hidden="true"
+                  ></i>
+                  Blog
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="text-white-50 text-decoration-none"
+                  aria-label="Contato"
+                >
+                  <i
+                    class="fas fa-chevron-right me-2 small"
+                    aria-hidden="true"
+                  ></i>
+                  Contato
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Tópicos em destaque -->
+          <div class="col-lg-3 col-md-6">
+            <h6 class="mb-3">
+              <i class="fas fa-star me-2" aria-hidden="true"></i>
+              Tópicos em Destaque
+            </h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="fundamentos.html"
+                  class="text-white-50 text-decoration-none"
+                  aria-label="Fundamentos da IA"
+                >
+                  <i
+                    class="fas fa-chevron-right me-2 small"
+                    aria-hidden="true"
+                  ></i>
+                  Fundamentos da IA
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  href="ml.html"
+                  class="text-white-50 text-decoration-none"
+                  aria-label="Machine Learning"
+                >
+                  <i
+                    class="fas fa-chevron-right me-2 small"
+                    aria-hidden="true"
+                  ></i>
+                  Machine Learning
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  href="deep-learning.html"
+                  class="text-white-50 text-decoration-none"
+                  aria-label="Deep Learning"
+                >
+                  <i
+                    class="fas fa-chevron-right me-2 small"
+                    aria-hidden="true"
+                  ></i>
+                  Deep Learning
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  href="projetos.html"
+                  class="text-white-50 text-decoration-none"
+                  aria-label="Projetos Práticos"
+                >
+                  <i
+                    class="fas fa-chevron-right me-2 small"
+                    aria-hidden="true"
+                  ></i>
+                  Projetos Práticos
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Informações de contato -->
+          <div class="col-lg-3 col-md-6">
+            <h6 class="mb-3">
+              <i class="fas fa-envelope me-2" aria-hidden="true"></i>
+              Contato
+            </h6>
+            <div class="text-white-50">
+              <p class="mb-2">
+                <i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i>
+                Salvador, Bahia - Brasil
+              </p>
+              <p class="mb-2">
+                <i class="fas fa-envelope me-2" aria-hidden="true"></i>
+                <a
+                  href="mailto:contato@iadozero.com"
+                  class="text-white-50 text-decoration-none"
+                >
+                  contato@iadozero.com
+                </a>
+              </p>
+              <p class="mb-3">
+                <i class="fas fa-globe me-2" aria-hidden="true"></i>
+                <a
+                  href="https://iadozero.com"
+                  class="text-white-50 text-decoration-none"
+                >
+                  www.iadozero.com
+                </a>
+              </p>
+
+              <!-- Newsletter -->
+              <div class="mt-3">
+                <h6 class="mb-2">
+                  <i class="fas fa-bell me-2" aria-hidden="true"></i>
+                  Newsletter
+                </h6>
+                <div class="input-group input-group-sm">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Seu e-mail"
+                    aria-label="Digite seu e-mail para newsletter"
+                  />
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    aria-label="Inscrever-se na newsletter"
+                  >
+                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Linha divisória -->
+        <hr class="border-secondary my-4" />
+
+        <!-- Seção inferior do footer -->
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-md-12 mb-3 mb-lg-0">
+            <p class="mb-2">
+              <i class="fas fa-copyright me-1" aria-hidden="true"></i>
+              2025 IA Do Zero. Todos os direitos reservados.
+            </p>
+            <p class="mb-0 small text-white-50">
+              <i class="fas fa-code me-1" aria-hidden="true"></i>
+              Desenvolvido com
+              <i class="fas fa-heart text-danger mx-1" aria-hidden="true"></i>
+              por <strong>Luis Antonio Souza Teixeira</strong>
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-12 text-lg-end">
+            <nav aria-label="Links legais do rodapé" class="mb-2">
+              <a
+                href="../privacy.html"
+                class="text-white-50 text-decoration-none me-3"
+                aria-label="Acessar Política de Privacidade"
+              >
+                <i class="fas fa-shield-alt me-1" aria-hidden="true"></i>
+                Política de Privacidade
+              </a>
+              <a
+                href="../terms-of-service.html"
+                class="text-white-50 text-decoration-none me-3"
+                aria-label="Acessar Termos de Uso"
+              >
+                <i class="fas fa-file-contract me-1" aria-hidden="true"></i>
+                Termos de Uso
+              </a>
+              <a
+                href="../cookies.html"
+                class="text-white-50 text-decoration-none"
+                aria-label="Acessar Política de Cookies"
+              >
+                <i class="fas fa-cookie-bite me-1" aria-hidden="true"></i>
+                Cookies
+              </a>
+            </nav>
+
+            <!-- Indicadores de qualidade -->
+            <div
+              class="d-flex justify-content-lg-end justify-content-center gap-3 small text-white-50"
+            >
+              <span title="Conteúdo 100% gratuito">
+                <i class="fas fa-gift me-1" aria-hidden="true"></i>
+                100% Gratuito
+              </span>
+              <span title="Conteúdo em português brasileiro">
+                <i class="fas fa-flag me-1" aria-hidden="true"></i>
+                PT-BR
+              </span>
+              <span title="Última atualização">
+                <i class="fas fa-sync-alt me-1" aria-hidden="true"></i>
+                Atualizado 2025
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botão voltar ao topo -->
+        <div class="text-center mt-4">
+          <button
+            type="button"
+            class="btn btn-outline-light btn-sm"
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            aria-label="Voltar ao topo da página"
+          >
+            <i class="fas fa-chevron-up me-2" aria-hidden="true"></i>
+            Voltar ao Topo
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript via CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript principal da aplicação -->
+    <script src="../../js/app.js"></script>
+
+    <!-- Script específico do tópico de fundamentos -->
+    <script
+      type="module"
+      src="../../js/modules/topics/topic01-fundamentos.js"
+    ></script>
+  </body>
+</html>
