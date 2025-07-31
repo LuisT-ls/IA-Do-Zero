@@ -104,70 +104,52 @@
 
   <body>
     <!-- Header -->
-    <header class="header">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="../index.html">
-            <i class="fas fa-robot me-2"></i>
-            IA Do Zero
-          </a>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="../index.html">
-                  <i class="fas fa-home me-1"></i>
-                  Início
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="terms-of-service.html">
-                  <i class="fas fa-file-contract me-1"></i>
-                  Termos de Uso
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="privacy.html">
-                  <i class="fas fa-shield-alt me-1"></i>
-                  Privacidade
-                </a>
-              </li>
-            </ul>
+    <header class="bg-primary text-white py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h1 class="display-4 fw-bold mb-3">
+              <i class="fas fa-file-contract me-3"></i>
+              Termos de Uso
+            </h1>
+            <p class="lead mb-0">
+              Última atualização:
+              <time datetime="2025-07-31">31 de Julho de 2025</time>
+            </p>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
 
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <div class="navbar-nav mx-auto">
+          <a class="nav-link" href="../index.html">
+            <i class="fas fa-home me-1"></i>
+            Início
+          </a>
+          <a class="nav-link active" href="terms-of-service.html">
+            <i class="fas fa-file-contract me-1"></i>
+            Termos de Uso
+          </a>
+          <a class="nav-link" href="privacy.html">
+            <i class="fas fa-shield-alt me-1"></i>
+            Privacidade
+          </a>
+          <a class="nav-link" href="cookies.html">
+            <i class="fas fa-cookie-bite me-1"></i>
+            Cookies
+          </a>
+        </div>
+      </div>
+    </nav>
+
     <!-- Main Content -->
-    <main class="main-content">
+    <main>
       <div class="container py-5">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <!-- Header dos Termos -->
-            <div class="text-center mb-5">
-              <h1 class="display-4 fw-bold text-primary mb-3">
-                <i class="fas fa-file-contract me-3"></i>
-                Termos de Uso
-              </h1>
-              <p class="lead text-muted">
-                Última atualização:
-                <time datetime="2025-07-31">31 de Julho de 2025</time>
-              </p>
-              <hr class="my-4" />
-            </div>
-
             <!-- Introdução -->
             <section class="mb-5">
               <h2 class="h3 text-primary mb-3">
@@ -309,19 +291,19 @@
                 educacional do conteúdo, sujeita aos seguintes termos:
               </p>
               <ul class="list-unstyled">
-                <li class="mb-2">
+                <li>
                   <i class="fas fa-info-circle text-info me-2"></i>
                   O conteúdo pode ser utilizado para fins educacionais pessoais
                 </li>
-                <li class="mb-2">
+                <li>
                   <i class="fas fa-info-circle text-info me-2"></i>
                   É permitido compartilhar o conteúdo em contextos educacionais
                 </li>
-                <li class="mb-2">
+                <li>
                   <i class="fas fa-info-circle text-info me-2"></i>
                   É proibido o uso comercial sem autorização expressa
                 </li>
-                <li class="mb-2">
+                <li>
                   <i class="fas fa-info-circle text-info me-2"></i>
                   Deve-se sempre atribuir crédito à IA Do Zero
                 </li>
@@ -339,15 +321,15 @@
                 "conforme disponível". Não garantimos que:
               </p>
               <ul class="list-unstyled">
-                <li class="mb-2">
+                <li>
                   <i class="fas fa-times text-warning me-2"></i>
                   A plataforma estará sempre disponível ou livre de erros
                 </li>
-                <li class="mb-2">
+                <li>
                   <i class="fas fa-times text-warning me-2"></i>
                   O conteúdo será sempre preciso ou atualizado
                 </li>
-                <li class="mb-2">
+                <li>
                   <i class="fas fa-times text-warning me-2"></i>
                   Os resultados educacionais serão garantidos
                 </li>
@@ -435,38 +417,26 @@
                 contato conosco através dos seguintes canais:
               </p>
               <div class="row">
-                <div class="col-md-6">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <h5 class="card-title">
-                        <i class="fas fa-envelope text-primary me-2"></i>
-                        Email
-                      </h5>
+                <div class="col-md-6 mb-3">
+                  <div class="card h-100 border-primary">
+                    <div class="card-body text-center">
+                      <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+                      <h5 class="card-title">Email</h5>
                       <p class="card-text">
-                        <a
-                          href="mailto:contato@iadozero.com"
-                          class="text-decoration-none"
-                        >
+                        <a href="mailto:contato@iadozero.com">
                           contato@iadozero.com
                         </a>
                       </p>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <h5 class="card-title">
-                        <i class="fas fa-globe text-primary me-2"></i>
-                        Website
-                      </h5>
+                <div class="col-md-6 mb-3">
+                  <div class="card h-100 border-primary">
+                    <div class="card-body text-center">
+                      <i class="fas fa-globe fa-2x text-primary mb-3"></i>
+                      <h5 class="card-title">Website</h5>
                       <p class="card-text">
-                        <a
-                          href="https://iadozero.com"
-                          class="text-decoration-none"
-                        >
-                          iadozero.com
-                        </a>
+                        <a href="https://iadozero.com"> iadozero.com </a>
                       </p>
                     </div>
                   </div>
@@ -479,8 +449,8 @@
               <div class="d-flex align-items-center">
                 <i class="fas fa-info-circle me-3 fs-4"></i>
                 <div>
-                  <h5 class="alert-heading mb-2">Importante</h5>
-                  <p class="mb-0">
+                  <h5 class="alert-heading">Importante</h5>
+                  <p>
                     Ao utilizar nossa plataforma, você confirma que leu,
                     entendeu e concorda com estes Termos de Uso. Se você não
                     concordar com qualquer parte destes termos, recomendamos que
@@ -503,7 +473,7 @@
               <i class="fas fa-robot me-2"></i>
               IA Do Zero
             </h5>
-            <p class="mb-0">
+            <p>
               Aprenda Inteligência Artificial do zero com nossa plataforma
               educativa completa.
             </p>
@@ -515,19 +485,16 @@
               >
             </p>
             <div class="footer-links">
-              <a
-                href="terms-of-service.html"
-                class="text-light text-decoration-none me-3"
-              >
+              <a href="terms-of-service.html">
                 <small>Termos de Uso</small>
               </a>
-              <a
-                href="privacy.html"
-                class="text-light text-decoration-none me-3"
-              >
+              <a href="privacy.html">
                 <small>Política de Privacidade</small>
               </a>
-              <a href="../index.html" class="text-light text-decoration-none">
+              <a href="cookies.html">
+                <small>Política de Cookies</small>
+              </a>
+              <a href="../index.html">
                 <small>Início</small>
               </a>
             </div>

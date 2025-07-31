@@ -104,70 +104,52 @@
 
   <body>
     <!-- Header -->
-    <header class="header">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="../index.html">
-            <i class="fas fa-robot me-2"></i>
-            IA Do Zero
-          </a>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="../index.html">
-                  <i class="fas fa-home me-1"></i>
-                  Início
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="terms-of-service.html">
-                  <i class="fas fa-file-contract me-1"></i>
-                  Termos de Uso
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="privacy.html">
-                  <i class="fas fa-shield-alt me-1"></i>
-                  Privacidade
-                </a>
-              </li>
-            </ul>
+    <header class="bg-primary text-white py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h1 class="display-4 fw-bold mb-3">
+              <i class="fas fa-shield-alt me-3"></i>
+              Política de Privacidade
+            </h1>
+            <p class="lead mb-0">
+              Última atualização:
+              <time datetime="2024-01-15">15 de Janeiro de 2024</time>
+            </p>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
 
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <div class="navbar-nav mx-auto">
+          <a class="nav-link" href="../index.html">
+            <i class="fas fa-home me-1"></i>
+            Início
+          </a>
+          <a class="nav-link" href="terms-of-service.html">
+            <i class="fas fa-file-contract me-1"></i>
+            Termos de Uso
+          </a>
+          <a class="nav-link active" href="privacy.html">
+            <i class="fas fa-shield-alt me-1"></i>
+            Privacidade
+          </a>
+          <a class="nav-link" href="cookies.html">
+            <i class="fas fa-cookie-bite me-1"></i>
+            Cookies
+          </a>
+        </div>
+      </div>
+    </nav>
+
     <!-- Main Content -->
-    <main class="main-content">
+    <main>
       <div class="container py-5">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <!-- Header da Política -->
-            <div class="text-center mb-5">
-              <h1 class="display-4 fw-bold text-primary mb-3">
-                <i class="fas fa-shield-alt me-3"></i>
-                Política de Privacidade
-              </h1>
-              <p class="lead text-muted">
-                Última atualização:
-                <time datetime="2024-01-15">15 de Janeiro de 2024</time>
-              </p>
-              <hr class="my-4" />
-            </div>
-
             <!-- Introdução -->
             <section class="mb-5">
               <h2 class="h3 text-primary mb-3">
@@ -702,26 +684,29 @@
               <i class="fas fa-robot me-2"></i>
               IA Do Zero
             </h5>
-            <p class="mb-0">
+            <p>
               Aprenda Inteligência Artificial do zero com nossa plataforma
               educativa completa.
             </p>
           </div>
           <div class="col-md-6 text-md-end">
-            <p class="mb-0">
-              &copy; 2024 IA Do Zero. Todos os direitos reservados.
-            </p>
-            <div class="mt-2">
-              <a
-                href="terms-of-service.html"
-                class="text-light text-decoration-none me-3"
+            <p class="mb-1">
+              <small
+                >&copy; 2024 IA Do Zero. Todos os direitos reservados.</small
               >
-                <i class="fas fa-file-contract me-1"></i>
-                Termos de Uso
+            </p>
+            <div class="footer-links">
+              <a href="terms-of-service.html">
+                <small>Termos de Uso</small>
               </a>
-              <a href="privacy.html" class="text-light text-decoration-none">
-                <i class="fas fa-shield-alt me-1"></i>
-                Privacidade
+              <a href="privacy.html">
+                <small>Política de Privacidade</small>
+              </a>
+              <a href="cookies.html">
+                <small>Política de Cookies</small>
+              </a>
+              <a href="../index.html">
+                <small>Início</small>
               </a>
             </div>
           </div>

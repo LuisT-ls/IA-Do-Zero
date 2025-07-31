@@ -82,7 +82,6 @@
 
     <!-- CSS principal da aplicação -->
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="./css/privacy.css" />
 
     <!-- Manifest para PWA -->
     <link rel="manifest" href="../manifest.json" />
@@ -105,89 +104,54 @@
 
   <body>
     <!-- Header -->
-    <header class="header">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-          <a class="navbar-brand" href="../index.html">
-            <i class="fas fa-brain me-2"></i>
-            IA Do Zero
-          </a>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="../index.html">
-                  <i class="fas fa-home me-1"></i>
-                  Início
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../index.html#topics">
-                  <i class="fas fa-book me-1"></i>
-                  Tópicos
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../index.html#about">
-                  <i class="fas fa-info-circle me-1"></i>
-                  Sobre
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main-content">
+    <header class="bg-primary text-white py-5">
       <div class="container">
         <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h1 class="display-4 fw-bold mb-3">
+              <i class="fas fa-cookie-bite me-3"></i>
+              Política de Cookies
+            </h1>
+            <p class="lead mb-0">
+              Última atualização: <time datetime="2024-01-15">15 de Janeiro de 2024</time>
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <div class="navbar-nav mx-auto">
+          <a class="nav-link" href="../index.html">
+            <i class="fas fa-home me-1"></i>
+            Início
+          </a>
+          <a class="nav-link" href="terms-of-service.html">
+            <i class="fas fa-file-contract me-1"></i>
+            Termos de Uso
+          </a>
+          <a class="nav-link" href="privacy.html">
+            <i class="fas fa-shield-alt me-1"></i>
+            Privacidade
+          </a>
+          <a class="nav-link active" href="cookies.html">
+            <i class="fas fa-cookie-bite me-1"></i>
+            Cookies
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container py-5">
+        <div class="row justify-content-center">
           <div class="col-lg-10">
-            <!-- Breadcrumb -->
-            <nav aria-label="breadcrumb" class="mt-4">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="../index.html">
-                    <i class="fas fa-home me-1"></i>
-                    Início
-                  </a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Política de Cookies
-                </li>
-              </ol>
-            </nav>
-
-            <!-- Page Header -->
-            <div class="page-header text-center mb-5">
-              <h1 class="display-4 fw-bold text-primary">
-                <i class="fas fa-cookie-bite me-3"></i>
-                Política de Cookies
-              </h1>
-              <p class="lead text-muted">
-                Última atualização:
-                <time datetime="2024-01-15">15 de Janeiro de 2024</time>
-              </p>
-            </div>
-
-            <!-- Content Sections -->
-            <div class="policy-content">
               <!-- Introduction -->
-              <section class="policy-section mb-5">
-                <h2 class="section-title">
+              <section class="mb-5">
+                <h2 class="h3 text-primary mb-3">
                   <i class="fas fa-info-circle me-2"></i>
                   1. Introdução
                 </h2>
@@ -619,37 +583,33 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h5 class="text-white">
-              <i class="fas fa-brain me-2"></i>
+            <h5>
+              <i class="fas fa-robot me-2"></i>
               IA Do Zero
             </h5>
-            <p class="text-muted">
+            <p>
               Aprenda Inteligência Artificial do zero com nossa plataforma
               educativa completa.
             </p>
           </div>
           <div class="col-md-6 text-md-end">
+            <p class="mb-1">
+              <small>&copy; 2024 IA Do Zero. Todos os direitos reservados.</small>
+            </p>
             <div class="footer-links">
-              <a href="../index.html" class="text-muted me-3">
-                <i class="fas fa-home me-1"></i>
-                Início
+              <a href="terms-of-service.html">
+                <small>Termos de Uso</small>
               </a>
-              <a href="./privacy.html" class="text-muted me-3">
-                <i class="fas fa-shield-alt me-1"></i>
-                Privacidade
+              <a href="privacy.html">
+                <small>Política de Privacidade</small>
               </a>
-              <a href="./cookies.html" class="text-muted me-3">
-                <i class="fas fa-cookie-bite me-1"></i>
-                Cookies
+              <a href="cookies.html">
+                <small>Política de Cookies</small>
               </a>
-              <a href="./terms-of-service.html" class="text-muted">
-                <i class="fas fa-file-contract me-1"></i>
-                Termos
+              <a href="../index.html">
+                <small>Início</small>
               </a>
             </div>
-            <p class="text-muted mt-2">
-              &copy; 2024 IA Do Zero. Todos os direitos reservados.
-            </p>
           </div>
         </div>
       </div>
